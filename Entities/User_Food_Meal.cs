@@ -13,8 +13,8 @@ namespace Entities
 		public int MealID { get; set; }
 		public decimal Amount { get; set; }
 		public DateTime MealDate { get; set; }
-		public Users Users { get; set; }
-		public Foods Foods { get; set; }
-		public Meal Meals { get; set; }
+		public Users? Users { get; set; }
+		public Foods? Foods { get; set; }
+		public Meal? Meals { get; set; }
 	}
 }
