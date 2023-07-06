@@ -14,7 +14,8 @@ namespace DAL.CFG
 			builder.Property(x=>x.Email).IsRequired().HasColumnType("nvarchar").HasMaxLength(100);
 			builder.Property(x=>x.Password).IsRequired().HasColumnType("nvarchar").HasMaxLength(100);
 			builder.Property(x => x.IsActive).IsRequired().HasColumnType("bit");
-
+			builder.Ignore(x=> x.FullName);
+			builder.ToTable("Users");
 			builder.HasMany(x=>x.UsersMeals).WithOne(x=>x.Users).HasForeignKey(x=>x.UserID);
 			builder.HasOne(x=>x.UserDetails).WithOne(x=>x.Users).HasForeignKey<UserDetails>(x=>x.UserID);
 		}
