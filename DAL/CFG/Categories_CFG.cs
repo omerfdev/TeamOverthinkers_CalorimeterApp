@@ -17,6 +17,7 @@ namespace DAL.CFG
 			
 			builder.HasData(
                 new Categories { CategoryName = "Meyve" });
+
         }
 
     }
