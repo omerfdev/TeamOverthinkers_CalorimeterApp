@@ -9,7 +9,7 @@ namespace DAL.CFG
 		public void Configure(EntityTypeBuilder<Meal> builder)
 		{
 			builder.HasKey(x=>x.ID);
-			builder.Property(x => x.MealName).HasColumnType("nvarchar");
+			builder.Property(x => x.MealName).HasColumnType("nvarchar").HasMaxLength(20);
 			builder.ToTable("Meals");
 			builder.HasMany(x=>x.UsersMeals).WithOne(x=>x.Meals).HasForeignKey(x=>x.MealID);
 		}

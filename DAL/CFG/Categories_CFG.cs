@@ -16,7 +16,7 @@ namespace DAL.CFG
 			builder.HasOne(x => x.CategoryDetails).WithOne(x => x.Categories).HasForeignKey<CategoryDetails>(x=>x.CategoryID);
 			
 			builder.HasData(
-                new Categories { CategoryName = "Meyve" });
+                new Categories {ID=1,CategoryName = "Meyve" });
 
         }
 

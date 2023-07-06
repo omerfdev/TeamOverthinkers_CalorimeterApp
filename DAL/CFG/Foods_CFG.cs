@@ -21,8 +21,8 @@ namespace DAL.CFG
             builder.HasOne(x => x.Category).WithMany(x => x.Foods).HasForeignKey(x => x.CategoryID);
             builder.HasMany(x => x.UsersMeals).WithOne(x=>x.Foods).HasForeignKey(x=>x.FoodID);
             builder.HasData(
-                new Foods { FoodName = "Elma", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 },
-                new Foods { FoodName = "Muz", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 }
+                new Foods {ID=1, FoodName = "Elma", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 },
+                new Foods {ID=2, FoodName = "Muz", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 }
 
 
 

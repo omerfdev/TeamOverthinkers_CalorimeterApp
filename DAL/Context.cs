@@ -25,6 +25,8 @@ namespace DAL
             modelBuilder.ApplyConfiguration<Categories>(new Categories_CFG());
             modelBuilder.ApplyConfiguration<CategoryDetails>(new Category_Details_CFG());
             modelBuilder.ApplyConfiguration<Meal>(new Meals_CFG());
+            modelBuilder.ApplyConfiguration<Users>(new Users_CFG());
+            modelBuilder.ApplyConfiguration<UserDetails>(new UserDetails_CFG());
             modelBuilder.ApplyConfiguration<User_Food_Meal>(new User_Food_Meal_CFG());
 
 
