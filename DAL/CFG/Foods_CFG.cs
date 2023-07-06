@@ -18,6 +18,8 @@ namespace DAL.CFG
             builder.Property(x => x.FoodImagePath).HasColumnType("nvarchar");
             builder.Property(x => x.FoodDescription).HasColumnType("nvarchar").HasMaxLength(150);
             builder.ToTable("Foods");
+            builder.HasOne(x => x.Category).WithMany(x => x.Foods).HasForeignKey(x => x.CategoryID);
+            builder.HasMany(x => x.UsersMeals).WithOne(x=>x.Foods).HasForeignKey(x=>x.FoodID);
             builder.HasData(
                 new Foods { FoodName = "Elma", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 },
                 new Foods { FoodName = "Muz", CarbonHydrateValue = 8.9M, FatValue = 4.5M, ProteinValue = 3.7M, Calories = 52M, CategoryID = 1 }

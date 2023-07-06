@@ -10,7 +10,12 @@ namespace DAL.CFG
         {
             builder.HasKey(x => x.ID);
             builder.Property(x => x.CategoryName).IsRequired();
-            builder.HasData(
+            builder.Property(x => x.ImagePath).HasColumnType("nvarchar").HasMaxLength(150); 
+            builder.Property(x => x.CategoryDescription).HasColumnType("nvarchar").HasMaxLength(150); 
+			builder.ToTable("Categories");
+			builder.HasOne(x => x.CategoryDetails).WithOne(x => x.Categories).HasForeignKey<CategoryDetails>(x=>x.CategoryID);
+			
+			builder.HasData(
                 new Categories { CategoryName = "Meyve" });
         }
 
