@@ -18,5 +18,6 @@ namespace Entities
 		public bool GlutenPreference { get; set; }
 		public bool IsLactoseIntolerant { get; set; }
 		public bool IsVegetarian { get; set; }
-	}
+        public Users Users { get; set; }
+    }
 }

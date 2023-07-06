@@ -12,6 +12,7 @@ namespace Entities
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-
+        public UserDetails UserDetails { get; set; }
+        public  ICollection<User_Food_Meal> UsersMeals { get; set; }
     }
 }

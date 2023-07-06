@@ -13,5 +13,6 @@ namespace Entities
         public bool IsGlutenFree  { get; set; }
         public bool HasLactose { get; set; }
         public bool IsVegaterian { get; set; }
+        public Categories Categories { get; set; }
     }
 }

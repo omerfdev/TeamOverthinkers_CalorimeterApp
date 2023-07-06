@@ -11,7 +11,8 @@ namespace Entities
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
         public string ImagePath { get; set; }
-        public ICollection<Foods> Foods { get; set; }    
+        public ICollection<Foods> Foods { get; set; }
+        public CategoryDetails CategoryDetails { get; set; }
 
     }
 }

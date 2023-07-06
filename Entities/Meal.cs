@@ -9,5 +9,6 @@ namespace Entities
 	public class Meal:BaseEntity
 	{
         public string MealName { get; set; }
-    }
+		public ICollection<User_Food_Meal> UsersMeals { get; set; }
+	}
 }
