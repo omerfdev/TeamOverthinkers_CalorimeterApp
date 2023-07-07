@@ -17,6 +17,7 @@ namespace Entities
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+		public bool IsAdmin { get; set; }
 		[NotMapped]
 		public string FullName { get => FirstName + " " + LastName; }
 		public UserDetails? UserDetails { get; set; }

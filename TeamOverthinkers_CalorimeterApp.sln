@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{07510D5D-EB74-4242-A859-3C08E17276B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{374042A9-8198-4ED5-89CF-733F39562254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{374042A9-8198-4ED5-89CF-733F39562254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{374042A9-8198-4ED5-89CF-733F39562254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{374042A9-8198-4ED5-89CF-733F39562254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{374042A9-8198-4ED5-89CF-733F39562254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

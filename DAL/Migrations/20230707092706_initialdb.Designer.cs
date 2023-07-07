@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DAL.Migrations
+namespace Entities.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230706153755_initialdb")]
+    [Migration("20230707092706_initialdb")]
     partial class initialdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -330,6 +330,9 @@ namespace DAL.Migrations
 
                     b.Property<bool?>("IsActive")
                         .IsRequired()
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
