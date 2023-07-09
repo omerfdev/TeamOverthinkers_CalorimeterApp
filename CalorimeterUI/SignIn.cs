@@ -122,6 +122,27 @@ namespace CalorimeterUI
 		{
 			Environment.Exit(0);
 		}
+		private void dlblExitForm_MouseEnter(object sender, EventArgs e)
+		{
+			dlblExitForm.ForeColor = Color.DarkKhaki;
+		}
+
+		private void dlblExitForm_MouseLeave(object sender, EventArgs e)
+		{
+			dlblExitForm.ForeColor = Color.Olive;
+		}
+
+		private void dlblDownForm_MouseEnter(object sender, EventArgs e)
+		{
+			dlblDownForm.ForeColor = Color.DarkKhaki;
+		}
+
+		private void dlblDownForm_MouseLeave(object sender, EventArgs e)
+		{
+			dlblDownForm.ForeColor = Color.Olive;
+		}
 		#endregion
+
+
 	}
 }

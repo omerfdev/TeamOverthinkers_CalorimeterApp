@@ -240,6 +240,8 @@
 			dlblDownForm.Text = "-";
 			dlblDownForm.TextAlign = ContentAlignment.MiddleLeft;
 			dlblDownForm.Click += dlblDownForm_Click;
+			dlblDownForm.MouseEnter += dlblDownForm_MouseEnter;
+			dlblDownForm.MouseLeave += dlblDownForm_MouseLeave;
 			// 
 			// dlblExitForm
 			// 
@@ -254,6 +256,8 @@
 			dlblExitForm.Text = "X";
 			dlblExitForm.TextAlign = ContentAlignment.MiddleLeft;
 			dlblExitForm.Click += dlblExitForm_Click;
+			dlblExitForm.MouseEnter += dlblExitForm_MouseEnter;
+			dlblExitForm.MouseLeave += dlblExitForm_MouseLeave;
 			// 
 			// SignIn
 			// 
