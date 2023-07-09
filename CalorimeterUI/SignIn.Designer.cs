@@ -42,8 +42,8 @@
 			txtPwd = new ReaLTaiizor.Controls.DungeonTextBox();
 			txtMail = new ReaLTaiizor.Controls.DungeonTextBox();
 			errorProviderEmail = new ErrorProvider(components);
-			drakeuiLabel2 = new DrakeUI.Framework.DrakeUILabel();
-			drakeuiLabel1 = new DrakeUI.Framework.DrakeUILabel();
+			dlblDownForm = new DrakeUI.Framework.DrakeUILabel();
+			dlblExitForm = new DrakeUI.Framework.DrakeUILabel();
 			((System.ComponentModel.ISupportInitialize)pcEmailVerification).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pbHidePw).BeginInit();
 			((System.ComponentModel.ISupportInitialize)errorProviderEmail).BeginInit();
@@ -227,31 +227,33 @@
 			// 
 			errorProviderEmail.ContainerControl = this;
 			// 
-			// drakeuiLabel2
+			// dlblDownForm
 			// 
-			drakeuiLabel2.BackColor = Color.Transparent;
-			drakeuiLabel2.Cursor = Cursors.Hand;
-			drakeuiLabel2.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
-			drakeuiLabel2.ForeColor = Color.Olive;
-			drakeuiLabel2.Location = new Point(668, 9);
-			drakeuiLabel2.Name = "drakeuiLabel2";
-			drakeuiLabel2.Size = new Size(28, 34);
-			drakeuiLabel2.TabIndex = 64;
-			drakeuiLabel2.Text = "-";
-			drakeuiLabel2.TextAlign = ContentAlignment.MiddleLeft;
+			dlblDownForm.BackColor = Color.Transparent;
+			dlblDownForm.Cursor = Cursors.Hand;
+			dlblDownForm.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
+			dlblDownForm.ForeColor = Color.Olive;
+			dlblDownForm.Location = new Point(668, 9);
+			dlblDownForm.Name = "dlblDownForm";
+			dlblDownForm.Size = new Size(28, 34);
+			dlblDownForm.TabIndex = 64;
+			dlblDownForm.Text = "-";
+			dlblDownForm.TextAlign = ContentAlignment.MiddleLeft;
+			dlblDownForm.Click += dlblDownForm_Click;
 			// 
-			// drakeuiLabel1
+			// dlblExitForm
 			// 
-			drakeuiLabel1.BackColor = Color.Transparent;
-			drakeuiLabel1.Cursor = Cursors.Hand;
-			drakeuiLabel1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
-			drakeuiLabel1.ForeColor = Color.Olive;
-			drakeuiLabel1.Location = new Point(731, 14);
-			drakeuiLabel1.Name = "drakeuiLabel1";
-			drakeuiLabel1.Size = new Size(28, 33);
-			drakeuiLabel1.TabIndex = 63;
-			drakeuiLabel1.Text = "X";
-			drakeuiLabel1.TextAlign = ContentAlignment.MiddleLeft;
+			dlblExitForm.BackColor = Color.Transparent;
+			dlblExitForm.Cursor = Cursors.Hand;
+			dlblExitForm.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
+			dlblExitForm.ForeColor = Color.Olive;
+			dlblExitForm.Location = new Point(731, 14);
+			dlblExitForm.Name = "dlblExitForm";
+			dlblExitForm.Size = new Size(28, 33);
+			dlblExitForm.TabIndex = 63;
+			dlblExitForm.Text = "X";
+			dlblExitForm.TextAlign = ContentAlignment.MiddleLeft;
+			dlblExitForm.Click += dlblExitForm_Click;
 			// 
 			// SignIn
 			// 
@@ -260,8 +262,8 @@
 			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			BackgroundImageLayout = ImageLayout.Stretch;
 			ClientSize = new Size(782, 453);
-			Controls.Add(drakeuiLabel2);
-			Controls.Add(drakeuiLabel1);
+			Controls.Add(dlblDownForm);
+			Controls.Add(dlblExitForm);
 			Controls.Add(chkRemember);
 			Controls.Add(pcEmailVerification);
 			Controls.Add(pbHidePw);
@@ -301,7 +303,7 @@
 		private ReaLTaiizor.Controls.DungeonTextBox txtPwd;
 		private ReaLTaiizor.Controls.DungeonTextBox txtMail;
 		private ErrorProvider errorProviderEmail;
-		private DrakeUI.Framework.DrakeUILabel drakeuiLabel2;
-		private DrakeUI.Framework.DrakeUILabel drakeuiLabel1;
+		private DrakeUI.Framework.DrakeUILabel dlblDownForm;
+		private DrakeUI.Framework.DrakeUILabel dlblExitForm;
 	}
 }

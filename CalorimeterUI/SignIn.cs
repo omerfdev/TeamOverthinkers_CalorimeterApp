@@ -86,6 +86,7 @@ namespace CalorimeterUI
 
 		}
 
+		#region Sign in process
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
 			Methods.RememberMe(chkRemember, txtMail.Text, txtPwd.Text);
@@ -100,14 +101,27 @@ namespace CalorimeterUI
 		{
 			ForgetPassword rst = new ForgetPassword();
 			rst.Owner = this;
-			Methods.Visibility(drakeuiLabel1);
-			Methods.Visibility(drakeuiLabel2);
+			Methods.Visibility(dlblExitForm);
+			Methods.Visibility(dlblDownForm);
 			Methods.Visibility(toggleMode);
 			rst.ShowDialog();
 			this.Show();
-			Methods.Visibility(drakeuiLabel1);
-			Methods.Visibility(drakeuiLabel2);
+			Methods.Visibility(dlblExitForm);
+			Methods.Visibility(dlblDownForm);
 			Methods.Visibility(toggleMode);
 		}
+		#endregion
+
+		#region Form Exit and Down process
+		private void dlblDownForm_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
+
+		private void dlblExitForm_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
+		#endregion
 	}
 }
