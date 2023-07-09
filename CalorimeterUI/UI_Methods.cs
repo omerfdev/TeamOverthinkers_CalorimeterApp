@@ -11,16 +11,17 @@ namespace CalorimeterUI
 	{
 		public static class Methods
 		{
-			private static string filePath = "usernamePassword.txt";
+			#region Random Verfication Code Method
 			public static int VerificationCode;
-
 			public static int RandomVerificationCode()
 			{
 				Random rnd = new Random();
 				VerificationCode = rnd.Next(100000, 999999);
 				return VerificationCode;
 			}
+			#endregion
 
+			#region Send Email process
 			public static void SendEmail(string body, string name, string mail)
 			{
 				var email = new MimeMessage();
@@ -35,17 +36,15 @@ namespace CalorimeterUI
 				};
 				using (var smtp = new SmtpClient())
 				{
-					
 					smtp.Connect("smtp.gmail.com", 587, false);
-
-					// Note: only needed if the SMTP server requires authentication
 					smtp.Authenticate("overthinkersapp@gmail.com", "kobmseidvyjqmnqg");
-
 					smtp.Send(email);
 					smtp.Disconnect(true);
 				}
 			}
+			#endregion
 
+			#region Visibility process
 			public static void Visibility(Control control)
 			{
 				if (control.Visible)
@@ -57,7 +56,9 @@ namespace CalorimeterUI
 					control.Visible = true;
 				}
 			}
+			#endregion
 
+			#region Email Validation 
 			public static void EmailValidation(DungeonTextBox tb, ErrorProvider er, PictureBox pb)
 			{
 				string email = tb.Text;
@@ -74,13 +75,16 @@ namespace CalorimeterUI
 					er.SetError(tb, "Please provide a valid Email");
 				}
 			}
+			#endregion
 
+			#region Remember me process
+			private static string filePath = "usernamePassword.txt";
 			public static void RememberMe(System.Windows.Forms.CheckBox chkRememberMe, string mail, string txtPassword)
 			{
 				if (chkRememberMe.Checked)
 				{
-					string[] veriler = { mail, txtPassword };
-					File.WriteAllLines(filePath, veriler);
+					string[] userData = { mail, txtPassword };
+					File.WriteAllLines(filePath, userData);
 				}
 				else
 				{
@@ -90,8 +94,10 @@ namespace CalorimeterUI
 					File.WriteAllLines(filePath, veriler);
 				}
 			}
+			#endregion
 
-			public static void GatherUserInfo(System.Windows.Forms.CheckBox chkRememberMe, DungeonTextBox txtMail, DungeonTextBox txtPassword)
+			#region Form Fill User Info Remember Check
+			public static void UserInfoRememberCheck(System.Windows.Forms.CheckBox chkRememberMe, DungeonTextBox txtMail, DungeonTextBox txtPassword)
 			{
 				if (File.Exists(filePath))
 				{
@@ -113,8 +119,10 @@ namespace CalorimeterUI
 					else { txtMail.Text = string.Empty; txtPassword.Text = string.Empty; }
 				}
 			}
+			#endregion
 
-			public static bool PasswordMethod(string pd, string confirmpd)
+			#region Password Check Method
+			public static bool PasswordCheckMethod(string pd, string confirmpd)
 			{
 				bool PasswordControl = false;
 				string password = pd;
@@ -145,7 +153,9 @@ namespace CalorimeterUI
 					return PasswordControl = true;
 				}
 			}
+			#endregion
 
+			#region Password Strength
 			public static void PasswordStrength(string pd, RibbonProgressBarLeft rb)
 			{
 				if (pd.Length < 8)
@@ -173,7 +183,9 @@ namespace CalorimeterUI
 					rb.ProgressColorB = Color.Green;
 				}
 			}
+			#endregion
 
+			#region Generate Password
 			public static string GeneratePassword()
 
 			{
@@ -211,7 +223,6 @@ namespace CalorimeterUI
 
 				return new string(password);
 			}
-
 			public static bool IsSpecialCharacter(char c)
 
 			{
@@ -220,6 +231,9 @@ namespace CalorimeterUI
 
 				return specialChars.Contains(c);
 			}
+			#endregion
+
+			#region Password Hash Process
 			public static string GenerateHash(string password)
 			{
 				byte[] inputBytes = Encoding.UTF8.GetBytes(password);
@@ -238,6 +252,7 @@ namespace CalorimeterUI
 
 				return sb.ToString();
 			}
+			#endregion
 		}
 	}
 }

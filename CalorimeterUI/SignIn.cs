@@ -83,7 +83,9 @@ namespace CalorimeterUI
 		#endregion
 		private void SignIn_Load(object sender, EventArgs e)
 		{
-
+			Methods.UserInfoRememberCheck(chkRemember, txtMail, txtPwd);
+			this.Top = 230;
+			this.Left = 500;
 		}
 
 		#region Sign in process
