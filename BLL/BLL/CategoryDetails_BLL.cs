@@ -29,15 +29,11 @@ namespace BLL.BLL
 		public void Update(CategoryDetails entity)
 		{
 			CategoryDetails categoryDetail = Search(entity.ID);
-
 			BusinessLayer._db.Entry<CategoryDetails>(categoryDetail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
-			// categoryDetail.CategoryID = entity.ID;
 			categoryDetail.IsAllergen = entity.IsAllergen;
 			categoryDetail.IsGlutenFree = entity.IsGlutenFree;
 			categoryDetail.HasLactose = entity.HasLactose;
 			categoryDetail.IsVegaterian = entity.IsVegaterian;
-
 			BusinessLayer._db.SaveChanges();
 		}
 	}

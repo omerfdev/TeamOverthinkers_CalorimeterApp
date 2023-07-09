@@ -29,15 +29,12 @@ namespace BLL.BLL
         public void Update(Users entity)
         {
             Users user = Search(entity.ID);
-
             BusinessLayer._db.Entry(user).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
             user.FirstName = entity.FirstName;
             user.LastName = entity.LastName;
             user.Email = entity.Email;
             user.Password = entity.Password;
             user.IsAdmin = entity.IsAdmin;
-
             BusinessLayer._db.SaveChanges();
         }
     }

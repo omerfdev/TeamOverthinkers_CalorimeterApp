@@ -29,9 +29,7 @@ namespace BLL.BLL
         public void Update(Foods entity)
         {
             Foods food = Search(entity.ID);
-
             BusinessLayer._db.Entry(food).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
             food.FoodName = entity.FoodName;
             food.CategoryID = entity.CategoryID;
             food.CarbonHydrateValue = entity.CarbonHydrateValue;
@@ -40,7 +38,6 @@ namespace BLL.BLL
             food.Calories = entity.Calories;
             food.FoodImagePath = entity.FoodImagePath;
             food.FoodDescription = entity.FoodDescription;
-
             BusinessLayer._db.SaveChanges();
         }
     }

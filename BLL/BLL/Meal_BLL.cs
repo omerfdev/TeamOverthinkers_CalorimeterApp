@@ -29,11 +29,8 @@ namespace BLL.BLL
 		public void Update(Meal entity)
 		{
 			Meal meal = Search(entity.ID);
-
 			BusinessLayer._db.Entry<Meal>(meal).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
 			meal.MealName = entity.MealName;
-
 			BusinessLayer._db.SaveChanges();
 		}
 	}
