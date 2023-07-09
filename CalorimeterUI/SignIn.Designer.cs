@@ -80,9 +80,11 @@
 			// 
 			chkRemember.AutoSize = true;
 			chkRemember.BackColor = Color.Transparent;
+			chkRemember.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			chkRemember.ForeColor = Color.DarkOliveGreen;
 			chkRemember.Location = new Point(372, 284);
 			chkRemember.Name = "chkRemember";
-			chkRemember.Size = new Size(129, 24);
+			chkRemember.Size = new Size(134, 24);
 			chkRemember.TabIndex = 62;
 			chkRemember.Text = "Remember Me";
 			chkRemember.UseVisualStyleBackColor = false;

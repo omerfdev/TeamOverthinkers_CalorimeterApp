@@ -15,6 +15,7 @@ namespace CalorimeterUI
 		}
 		Context db = new Context();
 		BusinessLayer bll = new BusinessLayer();
+
 		#region Move Form
 		private bool mouseDown;
 		private Point lastLocation;
@@ -41,6 +42,7 @@ namespace CalorimeterUI
 			mouseDown = false;
 		}
 		#endregion
+
 		#region ToggleMode
 		public static bool DarkMode;
 		private void toggleMode_ToggledChanged()
@@ -49,44 +51,77 @@ namespace CalorimeterUI
 			{
 				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png");
 				DarkMode = true;
+				if (txtPwd.UseSystemPasswordChar == true)
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hideDarkMode.png");
+				}
+				else
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\showDarkMode.png");
+				}
 			}
 			else
 			{
 				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
 				DarkMode = false;
+				if (txtPwd.UseSystemPasswordChar == true)
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hide.png");
+				}
+				else
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\show.png");
+				}
 			}
 		}
 		#endregion
+
 		#region Password Hide And Show
 		private void pbHidePw_Click(object sender, EventArgs e)
 		{
-			if (txtPwd.UseSystemPasswordChar == true)
+			if (DarkMode == false)
 			{
-				txtPwd.UseSystemPasswordChar = false;
+				pbHidePw.BackgroundImage = null;
+				if (txtPwd.UseSystemPasswordChar == false)
+				{
+					txtPwd.UseSystemPasswordChar = true;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hide.png");
+
+				}
+				else if (txtPwd.UseSystemPasswordChar == true)
+				{
+					txtPwd.UseSystemPasswordChar = false;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\show.png");
+				}
 			}
-			else if (txtPwd.UseSystemPasswordChar == false)
+			else if (DarkMode == true)
 			{
-				txtPwd.UseSystemPasswordChar = true;
+				pbHidePw.BackgroundImage = null;
+				if (txtPwd.UseSystemPasswordChar == false)
+				{
+					txtPwd.UseSystemPasswordChar = true;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hideDarkMode.png");
+
+				}
+				else if (txtPwd.UseSystemPasswordChar == true)
+				{
+					txtPwd.UseSystemPasswordChar = false;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\showDarkMode.png");
+				}
 			}
 
-			if (txtPwd.UseSystemPasswordChar == false)
-			{
-				pbHidePw.BackgroundImage = null;
-				pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\show.png");
-			}
-			else if (txtPwd.UseSystemPasswordChar == true)
-			{
-				pbHidePw.BackgroundImage = null;
-				pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hide.png");
-			}
+
 		}
 		#endregion
+
+		#region Sign in Form Load
 		private void SignIn_Load(object sender, EventArgs e)
 		{
 			Methods.UserInfoRememberCheck(chkRemember, txtMail, txtPwd);
 			this.Top = 230;
 			this.Left = 500;
 		}
+		#endregion
 
 		#region Sign in process
 		private void btnSignIn_Click(object sender, EventArgs e)
