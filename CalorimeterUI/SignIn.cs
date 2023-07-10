@@ -181,5 +181,9 @@ namespace CalorimeterUI
 		#endregion
 
 
+		private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+
+		}
 	}
 }

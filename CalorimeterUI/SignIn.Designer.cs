@@ -170,6 +170,7 @@
 			lblSignUp.TabStop = true;
 			lblSignUp.Text = "Sign Up";
 			lblSignUp.VisitedLinkColor = Color.FromArgb(240, 119, 70);
+			lblSignUp.LinkClicked += lblSignUp_LinkClicked;
 			// 
 			// btnSignIn
 			// 

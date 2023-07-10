@@ -52,14 +52,14 @@ namespace CalorimeterUI
 		{
 			pbBack.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\oliveBack.png");
 		}
-
+		#endregion
 
 		private void btnSend_Click(object sender, EventArgs e)
 		{
 			string password = $"Your new Password is: <b>{Methods.GeneratePassword()}</b>. You can change your password at user information tab.";
 			Methods.SendEmail(password, "", txtEmail.Text);
 		}
-		#endregion
+		
 
 		#region Email Validation process
 		private void txtEmail_TextChanged(object sender, EventArgs e)
