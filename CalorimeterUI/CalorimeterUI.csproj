@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="HomeScreen.Designer.cs~RF189dcb56.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DrakeUI.Framework" Version="1.3.5" />
     <PackageReference Include="MailKit" Version="4.1.0" />
     <PackageReference Include="ReaLTaiizor" Version="3.7.9.4" />
