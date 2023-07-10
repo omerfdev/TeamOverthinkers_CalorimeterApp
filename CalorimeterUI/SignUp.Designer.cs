@@ -54,7 +54,7 @@
 			// 
 			pictureBox1.BackColor = Color.Transparent;
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(356, 235);
+			pictureBox1.Location = new Point(371, 234);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(30, 29);
 			pictureBox1.TabIndex = 69;
@@ -71,7 +71,7 @@
 			rpBarPassword.EdgeColor = Color.FromArgb(125, 97, 94, 90);
 			rpBarPassword.ForeColor = Color.Black;
 			rpBarPassword.HatchType = System.Drawing.Drawing2D.HatchStyle.DarkUpwardDiagonal;
-			rpBarPassword.Location = new Point(148, 330);
+			rpBarPassword.Location = new Point(163, 329);
 			rpBarPassword.Maximum = 100;
 			rpBarPassword.Name = "rpBarPassword";
 			rpBarPassword.PercentageText = "%";
@@ -94,7 +94,7 @@
 			pbHidePw.BackColor = Color.Transparent;
 			pbHidePw.BackgroundImage = (Image)resources.GetObject("pbHidePw.BackgroundImage");
 			pbHidePw.BackgroundImageLayout = ImageLayout.Zoom;
-			pbHidePw.Location = new Point(356, 291);
+			pbHidePw.Location = new Point(371, 290);
 			pbHidePw.Name = "pbHidePw";
 			pbHidePw.Size = new Size(32, 28);
 			pbHidePw.SizeMode = PictureBoxSizeMode.Zoom;
@@ -106,7 +106,7 @@
 			// 
 			dtpBirthDate.FillColor = Color.White;
 			dtpBirthDate.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			dtpBirthDate.Location = new Point(149, 179);
+			dtpBirthDate.Location = new Point(164, 178);
 			dtpBirthDate.Margin = new Padding(4, 5, 4, 5);
 			dtpBirthDate.MaxLength = 10;
 			dtpBirthDate.MinimumSize = new Size(63, 0);
@@ -131,7 +131,7 @@
 			btnSignUp.FillSelectedColor = Color.DarkKhaki;
 			btnSignUp.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			btnSignUp.ForeColor = Color.Khaki;
-			btnSignUp.Location = new Point(196, 410);
+			btnSignUp.Location = new Point(211, 409);
 			btnSignUp.Name = "btnSignUp";
 			btnSignUp.RectColor = Color.DarkKhaki;
 			btnSignUp.RectDisableColor = Color.FromArgb(227, 242, 253);
@@ -148,7 +148,7 @@
 			lblRePwd.BackColor = Color.Transparent;
 			lblRePwd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblRePwd.ForeColor = Color.Olive;
-			lblRePwd.Location = new Point(149, 348);
+			lblRePwd.Location = new Point(164, 347);
 			lblRePwd.Name = "lblRePwd";
 			lblRePwd.Size = new Size(141, 20);
 			lblRePwd.TabIndex = 64;
@@ -161,7 +161,7 @@
 			txtRePwd.EdgeColor = Color.White;
 			txtRePwd.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
 			txtRePwd.ForeColor = Color.DimGray;
-			txtRePwd.Location = new Point(149, 371);
+			txtRePwd.Location = new Point(164, 370);
 			txtRePwd.MaxLength = 16;
 			txtRePwd.Multiline = false;
 			txtRePwd.Name = "txtRePwd";
@@ -177,7 +177,7 @@
 			lblPwd.BackColor = Color.Transparent;
 			lblPwd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblPwd.ForeColor = Color.Olive;
-			lblPwd.Location = new Point(148, 268);
+			lblPwd.Location = new Point(163, 267);
 			lblPwd.Name = "lblPwd";
 			lblPwd.Size = new Size(76, 20);
 			lblPwd.TabIndex = 62;
@@ -189,7 +189,7 @@
 			lblMail.BackColor = Color.Transparent;
 			lblMail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblMail.ForeColor = Color.Olive;
-			lblMail.Location = new Point(148, 212);
+			lblMail.Location = new Point(163, 211);
 			lblMail.Name = "lblMail";
 			lblMail.Size = new Size(53, 20);
 			lblMail.TabIndex = 61;
@@ -201,7 +201,7 @@
 			lblBirthDate.BackColor = Color.Transparent;
 			lblBirthDate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblBirthDate.ForeColor = Color.Olive;
-			lblBirthDate.Location = new Point(148, 153);
+			lblBirthDate.Location = new Point(163, 152);
 			lblBirthDate.Name = "lblBirthDate";
 			lblBirthDate.Size = new Size(81, 20);
 			lblBirthDate.TabIndex = 60;
@@ -213,7 +213,7 @@
 			lblSurname.BackColor = Color.Transparent;
 			lblSurname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblSurname.ForeColor = Color.Olive;
-			lblSurname.Location = new Point(148, 95);
+			lblSurname.Location = new Point(163, 94);
 			lblSurname.Name = "lblSurname";
 			lblSurname.Size = new Size(71, 20);
 			lblSurname.TabIndex = 59;
@@ -225,7 +225,7 @@
 			lblName.BackColor = Color.Transparent;
 			lblName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			lblName.ForeColor = Color.Olive;
-			lblName.Location = new Point(148, 36);
+			lblName.Location = new Point(163, 35);
 			lblName.Name = "lblName";
 			lblName.Size = new Size(51, 20);
 			lblName.TabIndex = 58;
@@ -238,7 +238,7 @@
 			txtPwd.EdgeColor = Color.White;
 			txtPwd.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
 			txtPwd.ForeColor = Color.DimGray;
-			txtPwd.Location = new Point(148, 291);
+			txtPwd.Location = new Point(163, 290);
 			txtPwd.MaxLength = 16;
 			txtPwd.Multiline = false;
 			txtPwd.Name = "txtPwd";
@@ -255,7 +255,7 @@
 			txtMail.EdgeColor = Color.White;
 			txtMail.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
 			txtMail.ForeColor = Color.DimGray;
-			txtMail.Location = new Point(148, 235);
+			txtMail.Location = new Point(163, 234);
 			txtMail.MaxLength = 200;
 			txtMail.Multiline = false;
 			txtMail.Name = "txtMail";
@@ -272,7 +272,7 @@
 			txtSurname.EdgeColor = Color.White;
 			txtSurname.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
 			txtSurname.ForeColor = Color.DimGray;
-			txtSurname.Location = new Point(148, 117);
+			txtSurname.Location = new Point(163, 116);
 			txtSurname.MaxLength = 50;
 			txtSurname.Multiline = false;
 			txtSurname.Name = "txtSurname";
@@ -289,7 +289,7 @@
 			txtName.EdgeColor = Color.White;
 			txtName.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
 			txtName.ForeColor = Color.DimGray;
-			txtName.Location = new Point(148, 59);
+			txtName.Location = new Point(163, 58);
 			txtName.MaxLength = 50;
 			txtName.Multiline = false;
 			txtName.Name = "txtName";

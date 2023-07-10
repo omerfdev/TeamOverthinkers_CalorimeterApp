@@ -2,16 +2,6 @@
 using DrakeUI.Framework;
 using Entities;
 using ReaLTaiizor.Controls;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using static CalorimeterUI.UI_Methods;
 
 namespace CalorimeterUI
@@ -75,6 +65,8 @@ namespace CalorimeterUI
 			}
 
 		}
+
+		#region Form Fill Check
 		public bool FillControl(bool control)
 		{
 			foreach (var item in this.Controls)
@@ -92,7 +84,9 @@ namespace CalorimeterUI
 				return true;
 			else return false;
 		}
+		#endregion
 
+		#region Sign Up Form Load
 		private void SignUp_Load(object sender, EventArgs e)
 		{
 			if (SignIn.DarkMode)
@@ -124,7 +118,9 @@ namespace CalorimeterUI
 			this.Location = this.Owner.Location;
 			this.Left += 300;
 		}
+		#endregion
 
+		#region Back To Form
 		private void pbHidePw_Click(object sender, EventArgs e)
 		{
 			if (SignIn.DarkMode == false)
@@ -158,5 +154,6 @@ namespace CalorimeterUI
 				}
 			}
 		}
+		#endregion
 	}
 }
