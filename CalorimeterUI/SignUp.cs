@@ -28,7 +28,7 @@ namespace CalorimeterUI
 		}
 		#endregion
 
-
+		#region Sign Up process
 		public void btnSignUp_Click(object sender, EventArgs e)
 		{
 			bool IsTextboxNull = false;
@@ -65,6 +65,7 @@ namespace CalorimeterUI
 			}
 
 		}
+		#endregion
 
 		#region Form Fill Check
 		public bool FillControl(bool control)
