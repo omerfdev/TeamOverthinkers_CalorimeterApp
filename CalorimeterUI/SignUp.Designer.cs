@@ -139,6 +139,7 @@
 			btnSignUp.Style = DrakeUI.Framework.UIStyle.Custom;
 			btnSignUp.TabIndex = 65;
 			btnSignUp.Text = "Sign Up";
+			btnSignUp.Click += btnSignUp_Click;
 			// 
 			// lblRePwd
 			// 

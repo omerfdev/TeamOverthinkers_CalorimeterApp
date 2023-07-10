@@ -183,7 +183,7 @@ namespace CalorimeterUI
 
 		private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-
+			
 		}
 	}
 }
