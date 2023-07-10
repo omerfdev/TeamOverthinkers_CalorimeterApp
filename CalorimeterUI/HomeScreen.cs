@@ -39,10 +39,7 @@ namespace CalorimeterUI
 			}
 		}
 		#endregion
-		private void HomeScreen_Load(object sender, EventArgs e)
-		{
-			flwSideBar.Width = flwSideBar.MinimumSize.Width;
-		}
+
 		bool sideBarExpand;
 		private void pcBoxMenu_Click(object sender, EventArgs e)
 		{
@@ -76,6 +73,11 @@ namespace CalorimeterUI
 		private void btnSettings_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void HomeScreen_Load(object sender, EventArgs e)
+		{
+			flwSideBar.Width = flwSideBar.MinimumSize.Width;
 		}
 	}
 }

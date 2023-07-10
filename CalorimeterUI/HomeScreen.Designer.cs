@@ -257,6 +257,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "HomeScreen";
 			Text = "HomeScreen";
+			Load += HomeScreen_Load;
 			MouseDown += HomeScreen_MouseDown;
 			MouseMove += HomeScreen_MouseMove;
 			MouseUp += HomeScreen_MouseUp;
