@@ -212,6 +212,7 @@
 			btnSettings.Text = "                 Settings";
 			btnSettings.TextAlign = ContentAlignment.MiddleRight;
 			btnSettings.UseVisualStyleBackColor = false;
+			btnSettings.Click += btnSettings_Click;
 			// 
 			// pnlContact
 			// 
@@ -256,6 +257,9 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "HomeScreen";
 			Text = "HomeScreen";
+			MouseDown += HomeScreen_MouseDown;
+			MouseMove += HomeScreen_MouseMove;
+			MouseUp += HomeScreen_MouseUp;
 			flwSideBar.ResumeLayout(false);
 			pnlMenu.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pcBoxMenu).EndInit();

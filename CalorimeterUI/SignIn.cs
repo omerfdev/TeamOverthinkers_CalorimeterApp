@@ -127,6 +127,8 @@ namespace CalorimeterUI
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
 			Methods.RememberMe(chkRemember, txtMail.Text, txtPwd.Text);
+			HomeScreen homeScreen = new HomeScreen();
+			homeScreen.Show();
 		}
 
 		private void txtMail_TextChanged(object sender, EventArgs e)
@@ -180,7 +182,7 @@ namespace CalorimeterUI
 		}
 		#endregion
 
-
+		#region Register Form Open
 		private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			SignUp sgn = new SignUp();
@@ -194,7 +196,7 @@ namespace CalorimeterUI
 			Methods.Visibility(dlblDownForm);
 			Methods.Visibility(toggleMode);
 		}
+		#endregion
 
-		
 	}
 }

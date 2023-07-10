@@ -16,7 +16,29 @@ namespace CalorimeterUI
 		{
 			InitializeComponent();
 		}
+		#region Move Home Screen Form
+		private bool mouseDown;
+		private Point lastLocation;
+		private void HomeScreen_MouseUp(object sender, MouseEventArgs e)
+		{
+			mouseDown = false;
+		}
+		private void HomeScreen_MouseDown(object sender, MouseEventArgs e)
+		{
+			mouseDown = true;
+			lastLocation = e.Location;
+		}
+		private void HomeScreen_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (mouseDown)
+			{
+				this.Location = new Point(
+					(this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
 
+				this.Update();
+			}
+		}
+		#endregion
 		private void HomeScreen_Load(object sender, EventArgs e)
 		{
 			flwSideBar.Width = flwSideBar.MinimumSize.Width;
@@ -49,6 +71,11 @@ namespace CalorimeterUI
 				}
 
 			}
+		}
+
+		private void btnSettings_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
