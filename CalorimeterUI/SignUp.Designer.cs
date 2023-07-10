@@ -100,6 +100,7 @@
 			pbHidePw.SizeMode = PictureBoxSizeMode.Zoom;
 			pbHidePw.TabIndex = 67;
 			pbHidePw.TabStop = false;
+			pbHidePw.Click += pbHidePw_Click;
 			// 
 			// dtpBirthDate
 			// 
@@ -145,9 +146,11 @@
 			// 
 			lblRePwd.AutoSize = true;
 			lblRePwd.BackColor = Color.Transparent;
+			lblRePwd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblRePwd.ForeColor = Color.Olive;
 			lblRePwd.Location = new Point(149, 348);
 			lblRePwd.Name = "lblRePwd";
-			lblRePwd.Size = new Size(131, 20);
+			lblRePwd.Size = new Size(141, 20);
 			lblRePwd.TabIndex = 64;
 			lblRePwd.Text = "Re-Enter Password";
 			// 
@@ -172,9 +175,11 @@
 			// 
 			lblPwd.AutoSize = true;
 			lblPwd.BackColor = Color.Transparent;
+			lblPwd.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblPwd.ForeColor = Color.Olive;
 			lblPwd.Location = new Point(148, 268);
 			lblPwd.Name = "lblPwd";
-			lblPwd.Size = new Size(70, 20);
+			lblPwd.Size = new Size(76, 20);
 			lblPwd.TabIndex = 62;
 			lblPwd.Text = "Password";
 			// 
@@ -182,9 +187,11 @@
 			// 
 			lblMail.AutoSize = true;
 			lblMail.BackColor = Color.Transparent;
+			lblMail.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblMail.ForeColor = Color.Olive;
 			lblMail.Location = new Point(148, 212);
 			lblMail.Name = "lblMail";
-			lblMail.Size = new Size(52, 20);
+			lblMail.Size = new Size(53, 20);
 			lblMail.TabIndex = 61;
 			lblMail.Text = "E-Mail";
 			// 
@@ -192,9 +199,11 @@
 			// 
 			lblBirthDate.AutoSize = true;
 			lblBirthDate.BackColor = Color.Transparent;
+			lblBirthDate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblBirthDate.ForeColor = Color.Olive;
 			lblBirthDate.Location = new Point(148, 153);
 			lblBirthDate.Name = "lblBirthDate";
-			lblBirthDate.Size = new Size(76, 20);
+			lblBirthDate.Size = new Size(81, 20);
 			lblBirthDate.TabIndex = 60;
 			lblBirthDate.Text = "Birth Date";
 			// 
@@ -202,9 +211,11 @@
 			// 
 			lblSurname.AutoSize = true;
 			lblSurname.BackColor = Color.Transparent;
+			lblSurname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblSurname.ForeColor = Color.Olive;
 			lblSurname.Location = new Point(148, 95);
 			lblSurname.Name = "lblSurname";
-			lblSurname.Size = new Size(67, 20);
+			lblSurname.Size = new Size(71, 20);
 			lblSurname.TabIndex = 59;
 			lblSurname.Text = "Surname";
 			// 
@@ -212,9 +223,11 @@
 			// 
 			lblName.AutoSize = true;
 			lblName.BackColor = Color.Transparent;
+			lblName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			lblName.ForeColor = Color.Olive;
 			lblName.Location = new Point(148, 36);
 			lblName.Name = "lblName";
-			lblName.Size = new Size(49, 20);
+			lblName.Size = new Size(51, 20);
 			lblName.TabIndex = 58;
 			lblName.Text = "Name";
 			// 
@@ -317,7 +330,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(483, 450);
+			ClientSize = new Size(520, 450);
 			Controls.Add(pictureBox1);
 			Controls.Add(rpBarPassword);
 			Controls.Add(pbHidePw);
@@ -338,6 +351,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "SignUp";
 			Text = "SignUp";
+			Load += SignUp_Load;
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			((System.ComponentModel.ISupportInitialize)pbHidePw).EndInit();
 			ResumeLayout(false);

@@ -19,6 +19,7 @@ namespace CalorimeterUI
 		}
 		public bool ItIsAMatch = false;
 
+		#region Email Verification Form Load
 		private void EmailVerificationForm_Load(object sender, EventArgs e)
 		{
 			if (SignIn.DarkMode)
@@ -33,7 +34,9 @@ namespace CalorimeterUI
 			this.Size = new Size(420, 450);
 			this.Location = this.Owner.Location;
 		}
+		#endregion
 
+		#region Send Verification Code
 		private void btnSend_Click(object sender, EventArgs e)
 		{
 			if (int.Parse(txtVerification.Text) == Methods.VerificationCode)
@@ -42,6 +45,7 @@ namespace CalorimeterUI
 				this.Close();
 			}
 		}
+		#endregion
 
 		#region Back To main page
 		private void pbBack_Click(object sender, EventArgs e)

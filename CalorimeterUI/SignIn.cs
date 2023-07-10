@@ -183,7 +183,18 @@ namespace CalorimeterUI
 
 		private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			
+			SignUp sgn = new SignUp();
+			sgn.Owner = this;
+			Methods.Visibility(dlblExitForm);
+			Methods.Visibility(dlblDownForm);
+			Methods.Visibility(toggleMode);
+			sgn.ShowDialog();
+			this.Show();
+			Methods.Visibility(dlblExitForm);
+			Methods.Visibility(dlblDownForm);
+			Methods.Visibility(toggleMode);
 		}
+
+		
 	}
 }

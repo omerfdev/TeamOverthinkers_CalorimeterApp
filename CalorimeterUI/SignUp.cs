@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,7 @@ namespace CalorimeterUI
 		}
 		#endregion
 
-		
+
 		public void btnSignUp_Click(object sender, EventArgs e)
 		{
 			bool IsTextboxNull = false;
@@ -72,7 +73,7 @@ namespace CalorimeterUI
 					BusinessLayer._db.SaveChanges();
 				}
 			}
-			
+
 		}
 		public bool FillControl(bool control)
 		{
@@ -90,6 +91,72 @@ namespace CalorimeterUI
 			if (control)
 				return true;
 			else return false;
+		}
+
+		private void SignUp_Load(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode)
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\backgroundDark.png");
+				if (txtPwd.UseSystemPasswordChar == true)
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hideDarkMode.png");
+
+				}
+				else
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\ShowDarkMode.png");
+				}
+			}
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\background.png");
+				if (txtPwd.UseSystemPasswordChar == true)
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hide.png");
+				}
+				else
+				{
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\Show.png");
+				}
+			}
+			this.Size = new Size(420, 450);
+			this.Location = this.Owner.Location;
+			this.Left += 300;
+		}
+
+		private void pbHidePw_Click(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode == false)
+			{
+				pbHidePw.BackgroundImage = null;
+				if (txtPwd.UseSystemPasswordChar == false)
+				{
+					txtPwd.UseSystemPasswordChar = true;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hide.png");
+
+				}
+				else if (txtPwd.UseSystemPasswordChar == true)
+				{
+					txtPwd.UseSystemPasswordChar = false;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\show.png");
+				}
+			}
+			else if (SignIn.DarkMode == true)
+			{
+				pbHidePw.BackgroundImage = null;
+				if (txtPwd.UseSystemPasswordChar == false)
+				{
+					txtPwd.UseSystemPasswordChar = true;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\hideDarkMode.png");
+
+				}
+				else if (txtPwd.UseSystemPasswordChar == true)
+				{
+					txtPwd.UseSystemPasswordChar = false;
+					pbHidePw.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\showDarkMode.png");
+				}
+			}
 		}
 	}
 }
