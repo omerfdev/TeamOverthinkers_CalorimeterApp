@@ -15,7 +15,7 @@ namespace DAL.CFG
 			builder.Property(x => x.ProteinValue).IsRequired().HasColumnType("decimal");
 			builder.Property(x => x.FatValue).IsRequired().HasColumnType("decimal");
 			builder.Property(x => x.Calories).IsRequired().HasColumnType("decimal");
-			builder.Property(x => x.FoodImagePath).HasColumnType("nvarchar");
+			builder.Property(x => x.FoodImagePath).HasColumnType("nvarchar(MAX)");
 			builder.Property(x => x.FoodDescription).HasColumnType("nvarchar").HasMaxLength(150);
 			builder.ToTable("Foods");
 			builder.HasOne(x => x.Category).WithMany(x => x.Foods).HasForeignKey(x => x.CategoryID);
