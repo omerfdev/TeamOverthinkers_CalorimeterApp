@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{374042A9-8198-4ED5-89CF-733F39562254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{0E85E898-84E5-4801-AFC0-5BAB2EBB3B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalorimeterUI", "CalorimeterUI\CalorimeterUI.csproj", "{87AEC6BF-417B-4510-9321-E2B98A8B660C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalorimeterUI", "CalorimeterUI\CalorimeterUI.csproj", "{87AEC6BF-417B-4510-9321-E2B98A8B660C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

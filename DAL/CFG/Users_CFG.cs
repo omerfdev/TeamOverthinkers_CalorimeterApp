@@ -18,7 +18,7 @@ namespace DAL.CFG
 			builder.ToTable("Users");
 			builder.HasMany(x=>x.UsersMeals).WithOne(x=>x.Users).HasForeignKey(x=>x.UserID);
 			builder.HasOne(x=>x.UserDetails).WithOne(x=>x.Users).HasForeignKey<UserDetails>(x=>x.UserID);
-			builder.HasData(new Users { ID = 1, FirstName = "admin", LastName = "admin", Email = "overthinkerst@gmail.com", Password = "60fe74406e7f353ed979f350f2fbb6a2e8690a5fa7d1b0c32983d1d8b3f95f67", IsAdmin = true });
+			builder.HasData(new Users { ID = 1, FirstName = "admin", LastName = "admin", Email = "overthinkersapp@gmail.com", Password = "60fe74406e7f353ed979f350f2fbb6a2e8690a5fa7d1b0c32983d1d8b3f95f67", IsAdmin = true ,IsActive=true});
 		}
 	}
 }

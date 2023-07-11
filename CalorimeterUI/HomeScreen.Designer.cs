@@ -255,6 +255,7 @@
 			ClientSize = new Size(917, 628);
 			Controls.Add(flwSideBar);
 			FormBorderStyle = FormBorderStyle.None;
+			IsMdiContainer = true;
 			Name = "HomeScreen";
 			Text = "HomeScreen";
 			Load += HomeScreen_Load;

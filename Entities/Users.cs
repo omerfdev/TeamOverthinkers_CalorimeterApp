@@ -13,11 +13,13 @@ namespace Entities
         {
 			UsersMeals = new HashSet<User_Food_Meal>();
 		}
+      
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
 		public bool IsAdmin { get; set; }
+		public bool IsActive { get; set; }
 		[NotMapped]
 		public string FullName { get => FirstName + " " + LastName; }
 		public UserDetails? UserDetails { get; set; }

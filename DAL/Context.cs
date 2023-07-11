@@ -1,8 +1,7 @@
 ﻿using DAL.CFG;
 using Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
 
 namespace DAL
 {
@@ -19,7 +18,7 @@ namespace DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=ALMALI\\OMERFDEV;Initial Catalog=CalorimeterDB;User ID=sa;pwd=Omer34;",b => b.MigrationsAssembly("Entities"));
+            optionsBuilder.UseSqlServer("Data Source=ALMALI\\OMERFDEV;Initial Catalog=CaloriMeterDB;User ID=sa;pwd=Omer34;");
 			
 		}
         protected override void OnModelCreating(ModelBuilder modelBuilder)

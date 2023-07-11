@@ -16,22 +16,22 @@ namespace DAL.CFG
 			builder.HasOne(x => x.CategoryDetails).WithOne(x => x.Categories).HasForeignKey<CategoryDetails>(x=>x.CategoryID);
 
 			builder.HasData(
-			   new Categories { ID = 1, CategoryName = "Beverages", ImagePath = "beverages", CategoryDescription = "..." },
-			   new Categories { ID = 2, CategoryName = "Breakfast Foods", ImagePath = "breakfastfoods", CategoryDescription = "..." },
-			   new Categories { ID = 3, CategoryName = "Dairy Products", ImagePath = "dairyproducts", CategoryDescription = "..." },
-			   new Categories { ID = 4, CategoryName = "Desserts", ImagePath = "desserts", CategoryDescription = "..." },
-			   new Categories { ID = 5, CategoryName = "Fast Foods", ImagePath = "fastfoods", CategoryDescription = "..." },
-			   new Categories { ID = 6, CategoryName = "Grain Foods", ImagePath = "grainfoods", CategoryDescription = "..." },
-			   new Categories { ID = 7, CategoryName = "Legume Dishes", ImagePath = "legumedishes", CategoryDescription = "..." },
-			   new Categories { ID = 8, CategoryName = "Main Courses", ImagePath = "maincourses", CategoryDescription = "..." },
-			   new Categories { ID = 9, CategoryName = "Meat Foods", ImagePath = "meatfoods", CategoryDescription = "..." },
-			   new Categories { ID = 10, CategoryName = "Nuts", ImagePath = "nuts", CategoryDescription = "..." },
-			   new Categories { ID = 11, CategoryName = "Pastry Foods", ImagePath = "pastryfoods", CategoryDescription = "..." },
-			   new Categories { ID = 12, CategoryName = "Salads", ImagePath = "salads", CategoryDescription = "..." },
-			   new Categories { ID = 13, CategoryName = "Sea Foods", ImagePath = "seafoods", CategoryDescription = "..." },
-			   new Categories { ID = 14, CategoryName = "Soups", ImagePath = "soups", CategoryDescription = "..." },
-			   new Categories { ID = 15, CategoryName = "Vegetable Foods", ImagePath = "vegetablefoods", CategoryDescription = "..." },
-			   new Categories { ID = 16, CategoryName = "Vegetables&fruits", ImagePath = "vegetablesandfruits", CategoryDescription = "..." }
+			   new Categories { ID = 1, CategoryName = "Beverages", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\beverages.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 2, CategoryName = "Breakfast Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\breakfastfoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 3, CategoryName = "Dairy Products", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\dairyproducts.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 4, CategoryName = "Desserts", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\desserts.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 5, CategoryName = "Fast Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\fastfoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 6, CategoryName = "Grain Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\grainfoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 7, CategoryName = "Legume Dishes", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\legumedishes.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 8, CategoryName = "Main Courses", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\maincourses.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 9, CategoryName = "Meat Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\meatfoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 10, CategoryName = "Nuts", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\nuts.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 11, CategoryName = "Pastry Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\pastryfoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 12, CategoryName = "Salads", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\salads.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 13, CategoryName = "Sea Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\seafoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 14, CategoryName = "Soups", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\soups.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 15, CategoryName = "Vegetable Foods", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\vegetablefoods.jpg", CategoryDescription = "..." },
+			   new Categories { ID = 16, CategoryName = "Vegetables&fruits", ImagePath = "..\\..\\..\\Image\\Images\\catagories\\vegetablesandfruits.jpg", CategoryDescription = "..." }
 				   );
 
 		}

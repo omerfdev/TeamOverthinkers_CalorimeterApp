@@ -40,6 +40,8 @@ namespace CalorimeterUI
 		}
 		#endregion
 
+		#region Side Bar Expand process
+
 		bool sideBarExpand;
 		private void pcBoxMenu_Click(object sender, EventArgs e)
 		{
@@ -69,7 +71,7 @@ namespace CalorimeterUI
 
 			}
 		}
-
+		#endregion
 		private void btnSettings_Click(object sender, EventArgs e)
 		{
 
