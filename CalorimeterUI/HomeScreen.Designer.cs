@@ -93,7 +93,7 @@
 			lblMenuBar.FlatStyle = FlatStyle.Flat;
 			lblMenuBar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
 			lblMenuBar.ForeColor = Color.Black;
-			lblMenuBar.Location = new Point(89, 24);
+			lblMenuBar.Location = new Point(85, 17);
 			lblMenuBar.Name = "lblMenuBar";
 			lblMenuBar.Size = new Size(80, 31);
 			lblMenuBar.TabIndex = 5;
@@ -105,7 +105,7 @@
 			pcBoxMenu.Image = (Image)resources.GetObject("pcBoxMenu.Image");
 			pcBoxMenu.Location = new Point(9, 9);
 			pcBoxMenu.Name = "pcBoxMenu";
-			pcBoxMenu.Size = new Size(57, 56);
+			pcBoxMenu.Size = new Size(52, 50);
 			pcBoxMenu.SizeMode = PictureBoxSizeMode.StretchImage;
 			pcBoxMenu.TabIndex = 0;
 			pcBoxMenu.TabStop = false;
