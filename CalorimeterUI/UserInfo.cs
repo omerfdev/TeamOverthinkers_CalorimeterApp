@@ -19,13 +19,17 @@ namespace CalorimeterUI
 		{
 			InitializeComponent();
 		}
-
+		#region User Info Form Load
 		private void UserInfo_Load(object sender, EventArgs e)
 		{
 
 			Methods_HomeScreen.FillCMB(cmbActivity);
 			GetUserDetails();
 		}
+		#endregion
+		/// <summary>
+		/// Method get User Info
+		/// </summary>
 		private void GetUserDetails()
 		{
 			BusinessLayer bll = new BusinessLayer();
@@ -52,6 +56,9 @@ namespace CalorimeterUI
 				drbMale.Checked = true;
 			else drbFemale.Checked = true;
 		}
+		/// <summary>
+		/// Update User Info
+		/// </summary>
 		private void UpdateUserDetails()
 		{
 			bool gender = false;
@@ -77,6 +84,10 @@ namespace CalorimeterUI
 
 			bll.UserDetails.Update(userDetails);
 		}
+		/// <summary>
+		/// Method gives textbox input only int.
+		/// </summary>
+		/// <param name="ctb"></param>
 		private void OnlyNumberTextBox(CrownTextBox ctb)
 		{
 			if (System.Text.RegularExpressions.Regex.IsMatch(ctb.Text, "[^0-9]"))
@@ -92,6 +103,7 @@ namespace CalorimeterUI
 			MessageBox.Show("User info has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
+		#region Form Textchanged process
 		private void txtWeight_TextChanged(object sender, EventArgs e)
 		{
 			OnlyNumberTextBox(txtWeight);
@@ -106,5 +118,6 @@ namespace CalorimeterUI
 		{
 			OnlyNumberTextBox(txtPhoneNumber);
 		}
+		#endregion
 	}
 }
