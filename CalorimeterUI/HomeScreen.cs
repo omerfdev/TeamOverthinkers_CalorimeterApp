@@ -127,7 +127,6 @@ namespace CalorimeterUI
 					break;
 				case "6":
 					this.Close();
-					this.Owner.Show();
 					break;
 			}
 		}
@@ -152,5 +151,39 @@ namespace CalorimeterUI
 					break;
 			}
 		}
+
+		#region Form Minimize 
+		private void lblMinimize_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
+
+		private void lblMinimize_MouseLeave(object sender, EventArgs e)
+		{
+			lblMinimize.ForeColor = Color.Olive;
+		}
+
+		private void lblMinimize_MouseEnter(object sender, EventArgs e)
+		{
+			lblMinimize.ForeColor = Color.DarkKhaki;
+		}
+		#endregion
+
+		#region Form Exit
+		private void lblExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
+
+		private void lblExit_MouseEnter(object sender, EventArgs e)
+		{
+			lblExit.ForeColor = Color.DarkKhaki;
+		}
+
+		private void lblExit_MouseLeave(object sender, EventArgs e)
+		{
+			lblExit.ForeColor = Color.Olive;
+		}
+		#endregion
 	}
 }

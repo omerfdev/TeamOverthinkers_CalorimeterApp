@@ -47,6 +47,8 @@
 			pnlLogout = new Panel();
 			btnLogout = new Button();
 			timerSideBar = new System.Windows.Forms.Timer(components);
+			lblMinimize = new DrakeUI.Framework.DrakeUILabel();
+			lblExit = new DrakeUI.Framework.DrakeUILabel();
 			flwSideBar.SuspendLayout();
 			pnlMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pcBoxMenu).BeginInit();
@@ -282,6 +284,38 @@
 			timerSideBar.Interval = 1;
 			timerSideBar.Tick += timerSideBar_Tick;
 			// 
+			// lblMinimize
+			// 
+			lblMinimize.BackColor = Color.Transparent;
+			lblMinimize.Cursor = Cursors.Hand;
+			lblMinimize.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
+			lblMinimize.ForeColor = Color.Olive;
+			lblMinimize.Location = new Point(810, 20);
+			lblMinimize.Name = "lblMinimize";
+			lblMinimize.Size = new Size(32, 45);
+			lblMinimize.TabIndex = 53;
+			lblMinimize.Text = "-";
+			lblMinimize.TextAlign = ContentAlignment.MiddleLeft;
+			lblMinimize.Click += lblMinimize_Click;
+			lblMinimize.MouseEnter += lblMinimize_MouseEnter;
+			lblMinimize.MouseLeave += lblMinimize_MouseLeave;
+			// 
+			// lblExit
+			// 
+			lblExit.BackColor = Color.Transparent;
+			lblExit.Cursor = Cursors.Hand;
+			lblExit.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
+			lblExit.ForeColor = Color.Olive;
+			lblExit.Location = new Point(864, 20);
+			lblExit.Name = "lblExit";
+			lblExit.Size = new Size(32, 44);
+			lblExit.TabIndex = 52;
+			lblExit.Text = "X";
+			lblExit.TextAlign = ContentAlignment.MiddleLeft;
+			lblExit.Click += lblExit_Click;
+			lblExit.MouseEnter += lblExit_MouseEnter;
+			lblExit.MouseLeave += lblExit_MouseLeave;
+			// 
 			// HomeScreen
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
@@ -289,7 +323,9 @@
 			BackColor = Color.OliveDrab;
 			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			ClientSize = new Size(917, 775);
+			Controls.Add(lblMinimize);
 			Controls.Add(flwSideBar);
+			Controls.Add(lblExit);
 			FormBorderStyle = FormBorderStyle.None;
 			IsMdiContainer = true;
 			Name = "HomeScreen";
@@ -333,5 +369,7 @@
 		private System.Windows.Forms.Timer timerSideBar;
 		private Panel pnlLogout;
 		private Button btnLogout;
+		private DrakeUI.Framework.DrakeUILabel lblMinimize;
+		private DrakeUI.Framework.DrakeUILabel lblExit;
 	}
 }
