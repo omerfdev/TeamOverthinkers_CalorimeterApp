@@ -15,6 +15,7 @@ namespace CalorimeterUI
 		}
 		Context db = new Context();
 		BusinessLayer bll = new BusinessLayer();
+		public static int UserID;
 
 		#region Move Form
 		private bool mouseDown;

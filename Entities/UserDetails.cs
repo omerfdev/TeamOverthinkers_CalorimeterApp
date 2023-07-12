@@ -14,6 +14,7 @@ namespace Entities
 		public DateTime BirthDate { get; set; }
 		public decimal Height { get; set; }
 		public decimal Weight { get; set; }
+		public decimal DailyActivity { get; set; }
 		public bool? Gender { get; set; }
 		[DefaultValue("false")]
 		public bool IsAllergic { get; set; }
