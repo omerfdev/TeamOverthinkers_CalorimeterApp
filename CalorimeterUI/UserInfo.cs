@@ -23,7 +23,7 @@ namespace CalorimeterUI
 		private void UserInfo_Load(object sender, EventArgs e)
 		{
 
-			Methods_HomeScreen.FillCMB(cmbActivity);
+			UI_Methods.Methods.FillCMB(cmbActivity);
 			GetUserDetails();
 		}
 		#endregion

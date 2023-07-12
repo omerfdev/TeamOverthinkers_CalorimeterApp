@@ -28,11 +28,11 @@ namespace CalorimeterUI
 			string firstName = user.FirstName.Substring(0, 1).ToUpper() + user.FirstName.Substring(1);
 			lblWelcome.Text = "Welcome" + $" {firstName}";
 			lblDateTimeNow.Text = DateTime.Now.ToString("d");
-			Methods_HomeScreen.CalculateTargetedCalorie();
-			crcProgressCarbon.Percentage = (int)Methods_HomeScreen.TotalCarbonhydrateValue;
-			crcProgressProtein.Percentage = (int)Methods_HomeScreen.TotalProteinValue;
-			crcProgressFat.Percentage = (int)Methods_HomeScreen.TotalFatValue;
-			crcProgressCalorie.Percentage = (int)Methods_HomeScreen.TotalCalorieValue;
+			UI_Methods.Methods.CalculateTargetedCalorie();
+			crcProgressCarbon.Percentage = (int)UI_Methods.Methods.TotalCarbonhydrateValue;
+			crcProgressProtein.Percentage = (int)UI_Methods.Methods.TotalProteinValue;
+			crcProgressFat.Percentage = (int)UI_Methods.Methods.TotalFatValue;
+			crcProgressCalorie.Percentage = (int)UI_Methods.Methods.TotalCalorieValue;
 		}
 	}
 }

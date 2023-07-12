@@ -25,10 +25,10 @@ namespace CalorimeterUI
 
 		private void Meals_Load(object sender, EventArgs e)
 		{
-			Methods_HomeScreen.TotalCalorieValue = 0;
-			Methods_HomeScreen.TotalFatValue = 0;
-			Methods_HomeScreen.TotalProteinValue = 0;
-			Methods_HomeScreen.TotalCarbonhydrateValue = 0;
+			UI_Methods.Methods.TotalCalorieValue = 0;
+			UI_Methods.Methods.TotalFatValue = 0;
+			UI_Methods.Methods.TotalProteinValue = 0;
+			UI_Methods.Methods.TotalCarbonhydrateValue = 0;
 
 			btnAddBreakfast.Click += Click;
 			btnAddLunch.Click += Click;
@@ -49,7 +49,7 @@ namespace CalorimeterUI
 			if (bl.User_Food_Meal.SearchFoodHistory(SignIn.UserID).Count() > 0)
 			{
 				ConfigureBars();
-			}	
+			}
 		}
 		private void Click(object sender, EventArgs e)
 		{
@@ -81,14 +81,10 @@ namespace CalorimeterUI
 		{
 			int userid = SignIn.UserID;
 			BusinessLayer bll = new BusinessLayer();
-			//UserMeals = bll.User_Food_Meal.Include()
-			//    .Where(x => x.CreateDate.Value.Date == DateTime.Now.Date && x.UserID == userid && x.MealID == Convert.ToInt32(flp.Tag))
-			//    .ToList();
 			UserMeals = bll.User_Food_Meal.SearchFoodHistory(userid).Where(x => x.MealID == Convert.ToInt32(flp.Tag)).ToList();
-
 			for (int i = 0; i < UserMeals.Count; i++)
 			{
-				Methods_HomeScreen.CalculateNutritionalValues(UserMeals[i].Foods, UserMeals[i].Amount);
+				UI_Methods.Methods.CalculateNutritionalValues(UserMeals[i].Foods, UserMeals[i].Amount);
 				FillPanel(UserMeals[i], flp);
 			}
 		}
@@ -105,19 +101,19 @@ namespace CalorimeterUI
 
 		public void ConfigureBars()
 		{
-			Methods_HomeScreen.CalculateTargetedCalorie();
+			UI_Methods.Methods.CalculateTargetedCalorie();
 
 
-			parrotFlatProgressBar1.MaxValue = (int)Methods_HomeScreen.TargetedCarbonhydrateValue;
-			parrotFlatProgressBar1.Value = (int)Methods_HomeScreen.TotalCarbonhydrateValue;
+			parrotFlatProgressBar1.MaxValue = (int)UI_Methods.Methods.TargetedCarbonhydrateValue;
+			parrotFlatProgressBar1.Value = (int)UI_Methods.Methods.TotalCarbonhydrateValue;
 
-			parrotFlatProgressBar2.MaxValue = (int)Methods_HomeScreen.TargetedProteinValue;
-			parrotFlatProgressBar2.Value = (int)Methods_HomeScreen.TotalProteinValue;
+			parrotFlatProgressBar2.MaxValue = (int)UI_Methods.Methods.TargetedProteinValue;
+			parrotFlatProgressBar2.Value = (int)UI_Methods.Methods.TotalProteinValue;
 
-			parrotFlatProgressBar3.MaxValue = (int)Methods_HomeScreen.TargetedFatValue;
-			parrotFlatProgressBar3.Value = (int)Methods_HomeScreen.TotalFatValue;
+			parrotFlatProgressBar3.MaxValue = (int)UI_Methods.Methods.TargetedFatValue;
+			parrotFlatProgressBar3.Value = (int)UI_Methods.Methods.TotalFatValue;
 
-			int result = Convert.ToInt32(Methods_HomeScreen.TotalCalorieValue * 100 / Methods_HomeScreen.TargetedCalories);
+			int result = Convert.ToInt32(UI_Methods.Methods.TotalCalorieValue * 100 / UI_Methods.Methods.TargetedCalories);
 			crclProgressBarDailyCalories.percentage = result;
 		}
 	}

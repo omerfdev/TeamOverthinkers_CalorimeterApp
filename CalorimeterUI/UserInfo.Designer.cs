@@ -335,7 +335,7 @@
 			// drbFemale
 			// 
 			drbFemale.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			drbFemale.Location = new Point(257, 107);
+			drbFemale.Location = new Point(280, 107);
 			drbFemale.Name = "drbFemale";
 			drbFemale.Padding = new Padding(22, 0, 0, 0);
 			drbFemale.RadioButtonColor = Color.FromArgb(161, 97, 110);
@@ -347,7 +347,7 @@
 			// drbMale
 			// 
 			drbMale.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			drbMale.Location = new Point(94, 107);
+			drbMale.Location = new Point(84, 107);
 			drbMale.Name = "drbMale";
 			drbMale.Padding = new Padding(22, 0, 0, 0);
 			drbMale.RadioButtonColor = Color.FromArgb(161, 97, 110);

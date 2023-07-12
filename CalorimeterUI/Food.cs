@@ -56,15 +56,9 @@ namespace AdminConsole
 				{
 					if (pictureBox1.Tag != null)
 					{
-						//food.FoodImagePath = Guid.NewGuid() + pictureBox1.Tag.ToString();
 						food.FoodImagePath = txtFoodImagePath.Text;
-						//Application.StartUpPAth veya Environment.CurrentDirectory ile bin/debug a gidebiliriz.
-
 						System.IO.File.Copy(pictureBox1.Tag.ToString(), txtFoodImagePath.Text, true);
-						//pictureBox1.Image.Save(food.FoodImagePath);
 					}
-
-
 					bll.Foods.Add(food);
 					MessageBox.Show("Added successfully.");
 					DGVFill();
@@ -78,22 +72,13 @@ namespace AdminConsole
 			}
 			catch (Exception)
 			{
-
 				MessageBox.Show("The product is not added.");
 			}
-
-
-
-
-
 		}
 
 		private void btnCategoryDelete_Click(object sender, EventArgs e)
 		{
-
 			int selectedID = GetSelectedIDFromDataGridView();
-
-
 			Foods_BLL foods_BLL = new Foods_BLL();
 			Foods food = foods_BLL.Search(selectedID);
 			if (food != null)
@@ -106,27 +91,19 @@ namespace AdminConsole
 				MessageBox.Show("the product does not found.");
 			}
 
-
-			//resmi silmek için:
 			pictureBox1.Image = null;
-
 			string imagePath = txtFoodImagePath.Text;
-
 			System.GC.Collect();
 			System.GC.WaitForPendingFinalizers();
 			File.Delete(imagePath);
-
 			ClearControls();
 			DGVFill();
 		}
 
 		private void btnCategoryUpdate_Click(object sender, EventArgs e)
 		{
-
 			int rowIndex = dgvFood.CurrentRow.Index;
-
 			int selectedID = GetSelectedIDFromDataGridView();
-
 			string foodName = txtFoodName.Text;
 			string foodDescription = txtFoodDescription.Text;
 			string imagePath = txtFoodImagePath.Text;
@@ -135,8 +112,6 @@ namespace AdminConsole
 			decimal fat = nmrFatValue.Value;
 			decimal protein = nmrProteinValue.Value;
 			decimal chdrate = nmrCarbonhydrateValue.Value;
-
-
 			Foods_BLL foods_BLL = new Foods_BLL();
 			Foods food = foods_BLL.Search(selectedID);
 
@@ -150,17 +125,11 @@ namespace AdminConsole
 				food.FatValue = fat;
 				food.ProteinValue = protein;
 				food.CarbonHydrateValue = chdrate;
-
-
-				//delete old picture:
 				pictureBox1.Image = null;
 				System.GC.Collect();
 				System.GC.WaitForPendingFinalizers();
 				File.Delete(imagePath);
-				//add new picture:
 				System.IO.File.Copy(pictureBox1.Tag.ToString(), food.FoodImagePath, true);
-
-
 				foods_BLL.Update(food);
 				MessageBox.Show("The food is updated successfully");
 			}
@@ -168,10 +137,6 @@ namespace AdminConsole
 			{
 				MessageBox.Show("The food is not found");
 			}
-
-
-
-
 			ClearControls();
 			DGVFill();
 		}
@@ -217,22 +182,13 @@ namespace AdminConsole
 			DialogResult result = ofd.ShowDialog();
 			if (result == DialogResult.OK)
 			{
-				//pictureboxa seçilen resmi getirmek için:
 				pictureBox1.Image = Image.FromFile(ofd.FileName);
-
-				//gelen resmin yolunu pictureboxın tagine atmak için:
 				string dosyaYolu = ofd.FileName;
 				pictureBox1.Tag = dosyaYolu;
-
-
-				//txtFoodImagePath' e dosya yolunu getirmek için:
 				string foodCategoryID = txtFoodCategoryID.Text;
 				string foodName = txtFoodName.Text;
-				txtFoodImagePath.Text = "..\\..\\..\\Resources\\Images\\" + foodCategoryID + "\\" + foodName + ".jpg";
-
-
+				txtFoodImagePath.Text = "..\\..\\..\\Image\\Images\\" + foodCategoryID + "\\" + foodName + ".jpg";
 			}
-
 		}
 
 		private void btnRefresh_Click(object sender, EventArgs e)
@@ -256,7 +212,6 @@ namespace AdminConsole
 		private void dgvFood_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int rowIndex = e.RowIndex;
-
 			if (rowIndex >= 0 && rowIndex < dgvFood.Rows.Count)
 			{
 				DataGridViewRow selectedRow = dgvFood.Rows[rowIndex];

@@ -38,6 +38,7 @@
 			// 
 			// menuStrip1
 			// 
+			menuStrip1.BackgroundImage = (Image)resources.GetObject("menuStrip1.BackgroundImage");
 			menuStrip1.ImageScalingSize = new Size(20, 20);
 			menuStrip1.Items.AddRange(new ToolStripItem[] { addToolStripMenuItem });
 			menuStrip1.Location = new Point(0, 0);

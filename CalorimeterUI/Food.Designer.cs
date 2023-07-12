@@ -398,7 +398,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackgroundImage = LoginUI.Properties.Resources.background;
+			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			ClientSize = new Size(762, 618);
 			Controls.Add(txtFoodCategoryID);
 			Controls.Add(btnCategoryNameShow);
@@ -429,7 +429,7 @@
 			Controls.Add(lblFoodID);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Food";
-			Text = "Food";
+			Text = "Add Food";
 			Load += Food_Load;
 			((System.ComponentModel.ISupportInitialize)dgvFood).EndInit();
 			((System.ComponentModel.ISupportInitialize)nmrCarbonhydrateValue).EndInit();

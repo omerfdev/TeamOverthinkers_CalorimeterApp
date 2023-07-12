@@ -93,7 +93,7 @@
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-			ClientSize = new Size(409, 379);
+			ClientSize = new Size(410, 380);
 			Controls.Add(btnOk);
 			Controls.Add(lblVerifiedInfo);
 			Controls.Add(lblVerified);
