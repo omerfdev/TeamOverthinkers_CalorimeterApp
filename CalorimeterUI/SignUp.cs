@@ -78,7 +78,7 @@ namespace CalorimeterUI
 		}
 		#endregion
 
-		#region Form Fill Check
+		#region Sign Up Form Fill Check
 		public bool FillControl(bool control)
 		{
 			foreach (var item in this.Controls)

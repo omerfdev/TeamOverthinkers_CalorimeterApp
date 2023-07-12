@@ -23,13 +23,13 @@ namespace CalorimeterUI
 			{
 				lblVerified.ForeColor = Color.DarkKhaki;
 				lblVerifiedInfo.ForeColor = Color.DarkKhaki;
-				this.BackgroundImage = Image.FromFile("..\\..\\..\\Resources\\darkbackground.png");
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\darkbackground.png");
 			}
 			else if (SignIn.DarkMode == false)
 			{
 				lblVerified.ForeColor = Color.Olive;
 				lblVerifiedInfo.ForeColor = Color.Olive;
-				this.BackgroundImage = Image.FromFile("..\\..\\..\\Resources\\background.png");
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\background.png");
 			}
 			this.Size = new Size(420, 450);
 			this.Location = this.Owner.Location;

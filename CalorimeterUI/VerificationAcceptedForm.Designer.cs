@@ -44,7 +44,7 @@
 			btnOk.FillSelectedColor = Color.DarkKhaki;
 			btnOk.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			btnOk.ForeColor = Color.Khaki;
-			btnOk.Location = new Point(151, 295);
+			btnOk.Location = new Point(156, 237);
 			btnOk.Margin = new Padding(3, 4, 3, 4);
 			btnOk.Name = "btnOk";
 			btnOk.RectColor = Color.DarkKhaki;
@@ -60,7 +60,7 @@
 			lblVerifiedInfo.AutoSize = true;
 			lblVerifiedInfo.BackColor = Color.Transparent;
 			lblVerifiedInfo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			lblVerifiedInfo.Location = new Point(70, 259);
+			lblVerifiedInfo.Location = new Point(75, 201);
 			lblVerifiedInfo.Name = "lblVerifiedInfo";
 			lblVerifiedInfo.Size = new Size(294, 20);
 			lblVerifiedInfo.TabIndex = 7;
@@ -71,7 +71,7 @@
 			lblVerified.AutoSize = true;
 			lblVerified.BackColor = Color.Transparent;
 			lblVerified.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-			lblVerified.Location = new Point(139, 199);
+			lblVerified.Location = new Point(156, 141);
 			lblVerified.Name = "lblVerified";
 			lblVerified.Size = new Size(115, 35);
 			lblVerified.TabIndex = 6;
@@ -81,9 +81,9 @@
 			// 
 			pbVerified.BackColor = Color.Transparent;
 			pbVerified.Image = (Image)resources.GetObject("pbVerified.Image");
-			pbVerified.Location = new Point(112, 34);
+			pbVerified.Location = new Point(105, 144);
 			pbVerified.Name = "pbVerified";
-			pbVerified.Size = new Size(159, 163);
+			pbVerified.Size = new Size(33, 32);
 			pbVerified.SizeMode = PictureBoxSizeMode.StretchImage;
 			pbVerified.TabIndex = 5;
 			pbVerified.TabStop = false;

@@ -163,11 +163,11 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			label4.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			label4.ForeColor = Color.FromArgb(64, 64, 64);
 			label4.Location = new Point(84, 177);
 			label4.Name = "label4";
-			label4.Size = new Size(174, 25);
+			label4.Size = new Size(171, 20);
 			label4.TabIndex = 19;
 			label4.Text = "Daily Activity Level";
 			// 
@@ -198,11 +198,11 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			label3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			label3.ForeColor = Color.FromArgb(64, 64, 64);
 			label3.Location = new Point(84, 144);
 			label3.Name = "label3";
-			label3.Size = new Size(143, 25);
+			label3.Size = new Size(132, 20);
 			label3.TabIndex = 15;
 			label3.Text = "Phone Number";
 			// 
@@ -221,11 +221,11 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			label2.ForeColor = Color.FromArgb(64, 64, 64);
 			label2.Location = new Point(84, 222);
 			label2.Name = "label2";
-			label2.Size = new Size(97, 25);
+			label2.Size = new Size(96, 20);
 			label2.TabIndex = 13;
 			label2.Text = "Birth Date";
 			// 
@@ -254,22 +254,22 @@
 			// lblWeight
 			// 
 			lblWeight.AutoSize = true;
-			lblWeight.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblWeight.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			lblWeight.ForeColor = Color.FromArgb(64, 64, 64);
 			lblWeight.Location = new Point(84, 66);
 			lblWeight.Name = "lblWeight";
-			lblWeight.Size = new Size(74, 25);
+			lblWeight.Size = new Size(67, 20);
 			lblWeight.TabIndex = 11;
 			lblWeight.Text = "Weight";
 			// 
 			// lblHeight
 			// 
 			lblHeight.AutoSize = true;
-			lblHeight.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblHeight.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			lblHeight.ForeColor = Color.FromArgb(64, 64, 64);
 			lblHeight.Location = new Point(84, 18);
 			lblHeight.Name = "lblHeight";
-			lblHeight.Size = new Size(68, 25);
+			lblHeight.Size = new Size(64, 20);
 			lblHeight.TabIndex = 10;
 			lblHeight.Text = "Height";
 			// 

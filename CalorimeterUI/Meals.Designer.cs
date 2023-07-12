@@ -70,7 +70,7 @@
 			btnRemoveSnack.ColorBackground = Color.Lavender;
 			btnRemoveSnack.ColorBackground_1 = Color.DarkKhaki;
 			btnRemoveSnack.ColorBackground_2 = Color.DarkKhaki;
-			btnRemoveSnack.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnRemoveSnack.ColorBackground_Pen = Color.Turquoise;
 			btnRemoveSnack.ColorLighting = Color.DarkKhaki;
 			btnRemoveSnack.ColorPen_1 = Color.DarkKhaki;
 			btnRemoveSnack.ColorPen_2 = Color.DarkKhaki;
@@ -111,7 +111,7 @@
 			btnRemoveDinner.ColorBackground = Color.Lavender;
 			btnRemoveDinner.ColorBackground_1 = Color.DarkKhaki;
 			btnRemoveDinner.ColorBackground_2 = Color.DarkKhaki;
-			btnRemoveDinner.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnRemoveDinner.ColorBackground_Pen = Color.Turquoise;
 			btnRemoveDinner.ColorLighting = Color.DarkKhaki;
 			btnRemoveDinner.ColorPen_1 = Color.DarkKhaki;
 			btnRemoveDinner.ColorPen_2 = Color.DarkKhaki;
@@ -152,7 +152,7 @@
 			btnRemoveLunch.ColorBackground = Color.Lavender;
 			btnRemoveLunch.ColorBackground_1 = Color.DarkKhaki;
 			btnRemoveLunch.ColorBackground_2 = Color.DarkKhaki;
-			btnRemoveLunch.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnRemoveLunch.ColorBackground_Pen = Color.Turquoise;
 			btnRemoveLunch.ColorLighting = Color.DarkKhaki;
 			btnRemoveLunch.ColorPen_1 = Color.DarkKhaki;
 			btnRemoveLunch.ColorPen_2 = Color.DarkKhaki;
@@ -193,7 +193,7 @@
 			btnRemoveBreakfast.ColorBackground = Color.Lavender;
 			btnRemoveBreakfast.ColorBackground_1 = Color.DarkKhaki;
 			btnRemoveBreakfast.ColorBackground_2 = Color.DarkKhaki;
-			btnRemoveBreakfast.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnRemoveBreakfast.ColorBackground_Pen = Color.Turquoise;
 			btnRemoveBreakfast.ColorLighting = Color.DarkKhaki;
 			btnRemoveBreakfast.ColorPen_1 = Color.DarkKhaki;
 			btnRemoveBreakfast.ColorPen_2 = Color.DarkKhaki;
@@ -359,7 +359,7 @@
 			btnAddSnacks.ColorBackground = Color.Lavender;
 			btnAddSnacks.ColorBackground_1 = Color.DarkKhaki;
 			btnAddSnacks.ColorBackground_2 = Color.DarkKhaki;
-			btnAddSnacks.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnAddSnacks.ColorBackground_Pen = Color.Turquoise;
 			btnAddSnacks.ColorLighting = Color.DarkKhaki;
 			btnAddSnacks.ColorPen_1 = Color.DarkKhaki;
 			btnAddSnacks.ColorPen_2 = Color.DarkKhaki;
@@ -400,7 +400,7 @@
 			btnAddDinner.ColorBackground = Color.Lavender;
 			btnAddDinner.ColorBackground_1 = Color.DarkKhaki;
 			btnAddDinner.ColorBackground_2 = Color.DarkKhaki;
-			btnAddDinner.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnAddDinner.ColorBackground_Pen = Color.Turquoise;
 			btnAddDinner.ColorLighting = Color.DarkKhaki;
 			btnAddDinner.ColorPen_1 = Color.DarkKhaki;
 			btnAddDinner.ColorPen_2 = Color.DarkKhaki;
@@ -441,7 +441,7 @@
 			btnAddLunch.ColorBackground = Color.Lavender;
 			btnAddLunch.ColorBackground_1 = Color.DarkKhaki;
 			btnAddLunch.ColorBackground_2 = Color.DarkKhaki;
-			btnAddLunch.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnAddLunch.ColorBackground_Pen = Color.Turquoise;
 			btnAddLunch.ColorLighting = Color.DarkKhaki;
 			btnAddLunch.ColorPen_1 = Color.DarkKhaki;
 			btnAddLunch.ColorPen_2 = Color.DarkKhaki;
@@ -482,7 +482,7 @@
 			btnAddBreakfast.ColorBackground = Color.Lavender;
 			btnAddBreakfast.ColorBackground_1 = Color.DarkKhaki;
 			btnAddBreakfast.ColorBackground_2 = Color.DarkKhaki;
-			btnAddBreakfast.ColorBackground_Pen = Color.FromArgb(161, 97, 110);
+			btnAddBreakfast.ColorBackground_Pen = Color.Turquoise;
 			btnAddBreakfast.ColorLighting = Color.DarkKhaki;
 			btnAddBreakfast.ColorPen_1 = Color.DarkKhaki;
 			btnAddBreakfast.ColorPen_2 = Color.DarkKhaki;
@@ -519,7 +519,7 @@
 			crclProgressBarDailyCalories.BackColor = Color.AliceBlue;
 			crclProgressBarDailyCalories.BackgroundImage = (Image)resources.GetObject("crclProgressBarDailyCalories.BackgroundImage");
 			crclProgressBarDailyCalories.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-			crclProgressBarDailyCalories.FilledColor = Color.Thistle;
+			crclProgressBarDailyCalories.FilledColor = Color.DarkBlue;
 			crclProgressBarDailyCalories.FilledColorAlpha = 130;
 			crclProgressBarDailyCalories.FilledThickness = 40;
 			crclProgressBarDailyCalories.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
@@ -536,13 +536,13 @@
 			crclProgressBarDailyCalories.TextColor = Color.Black;
 			crclProgressBarDailyCalories.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			crclProgressBarDailyCalories.TextSize = 10;
-			crclProgressBarDailyCalories.UnFilledColor = Color.PaleGreen;
+			crclProgressBarDailyCalories.UnFilledColor = Color.ForestGreen;
 			crclProgressBarDailyCalories.UnfilledThickness = 24;
 			// 
 			// groupBox4
 			// 
 			groupBox4.BackColor = Color.Transparent;
-			groupBox4.BackGColor = Color.Thistle;
+			groupBox4.BackGColor = Color.Turquoise;
 			groupBox4.BaseColor = Color.Transparent;
 			groupBox4.BorderColorG = Color.FromArgb(159, 159, 161);
 			groupBox4.BorderColorH = Color.FromArgb(182, 180, 186);
@@ -572,7 +572,7 @@
 			// groupBox3
 			// 
 			groupBox3.BackColor = Color.Transparent;
-			groupBox3.BackGColor = Color.Thistle;
+			groupBox3.BackGColor = Color.Turquoise;
 			groupBox3.BaseColor = Color.Transparent;
 			groupBox3.BorderColorG = Color.FromArgb(159, 159, 161);
 			groupBox3.BorderColorH = Color.FromArgb(182, 180, 186);
@@ -602,7 +602,7 @@
 			// groupBox2
 			// 
 			groupBox2.BackColor = Color.Transparent;
-			groupBox2.BackGColor = Color.Thistle;
+			groupBox2.BackGColor = Color.Turquoise;
 			groupBox2.BaseColor = Color.Transparent;
 			groupBox2.BorderColorG = Color.FromArgb(159, 159, 161);
 			groupBox2.BorderColorH = Color.FromArgb(182, 180, 186);
@@ -631,7 +631,7 @@
 			// groupBox1
 			// 
 			groupBox1.BackColor = Color.Transparent;
-			groupBox1.BackGColor = Color.Thistle;
+			groupBox1.BackGColor = Color.Turquoise;
 			groupBox1.BaseColor = Color.Transparent;
 			groupBox1.BorderColorG = Color.FromArgb(159, 159, 161);
 			groupBox1.BorderColorH = Color.FromArgb(182, 180, 186);

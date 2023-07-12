@@ -19,6 +19,7 @@ namespace CalorimeterUI
 		{
 			InitializeComponent();
 		}
+
 		#region User Info Form Load
 		private void UserInfo_Load(object sender, EventArgs e)
 		{
@@ -27,6 +28,8 @@ namespace CalorimeterUI
 			GetUserDetails();
 		}
 		#endregion
+
+		#region User Details Show Process
 		/// <summary>
 		/// Method get User Info
 		/// </summary>
@@ -56,10 +59,13 @@ namespace CalorimeterUI
 				drbMale.Checked = true;
 			else drbFemale.Checked = true;
 		}
+		#endregion
+
+		#region Update User Details
 		/// <summary>
-		/// Update User Info
+		/// Method gives Update User Info
 		/// </summary>
-		private void UpdateUserDetails()
+		public void UpdateUserDetails()
 		{
 			bool gender = false;
 			if (drbMale.Checked)
@@ -84,39 +90,36 @@ namespace CalorimeterUI
 
 			bll.UserDetails.Update(userDetails);
 		}
-		/// <summary>
-		/// Method gives textbox input only int.
-		/// </summary>
-		/// <param name="ctb"></param>
-		private void OnlyNumberTextBox(CrownTextBox ctb)
-		{
-			if (System.Text.RegularExpressions.Regex.IsMatch(ctb.Text, "[^0-9]"))
-			{
-				ctb.Text = ctb.Text.Remove(ctb.Text.Length - 1);
-				ctb.SelectionStart = ctb.Text.Length;
-			}
-		}
 
+		#endregion
+
+		#region Button save click event and Update User Details
+		/// <summary>
+		/// Button Save Event gives Update User Details 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			UpdateUserDetails();
 			MessageBox.Show("User info has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-
+		#endregion
+		
 		#region Form Textchanged process
 		private void txtWeight_TextChanged(object sender, EventArgs e)
 		{
-			OnlyNumberTextBox(txtWeight);
+			UI_Methods.Methods.OnlyNumberTextBox(txtWeight);
 		}
 
 		private void txtHeight_TextChanged(object sender, EventArgs e)
 		{
-			OnlyNumberTextBox(txtHeight);
+			UI_Methods.Methods.OnlyNumberTextBox(txtHeight);
 		}
 
 		private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
 		{
-			OnlyNumberTextBox(txtPhoneNumber);
+			UI_Methods.Methods.OnlyNumberTextBox(txtPhoneNumber);
 		}
 		#endregion
 	}

@@ -133,6 +133,12 @@ namespace CalorimeterUI
 			#endregion
 
 			#region Password Check Method
+			/// <summary>
+			/// Method gives Password Quality Check 
+			/// </summary>
+			/// <param name="pd"></param>
+			/// <param name="confirmpd"></param>
+			/// <returns></returns>
 			public static bool PasswordCheckMethod(string pd, string confirmpd)
 			{
 				bool PasswordControl = false;
@@ -177,13 +183,13 @@ namespace CalorimeterUI
 				}
 				else if (pd.All(char.IsDigit) || pd.All(char.IsLetter))
 				{
-					rb.Value = 40;
+					rb.Value = 45;
 					rb.ProgressColorA = Color.Red;
 					rb.ProgressColorB = Color.Red;
 				}
 				else if (pd.Length == 9 && pd.Any(char.IsDigit) && pd.Any(char.IsLetter))
 				{
-					rb.Value = 70;
+					rb.Value = 65;
 					rb.ProgressColorA = Color.Orange;
 					rb.ProgressColorB = Color.Orange;
 				}
@@ -197,6 +203,10 @@ namespace CalorimeterUI
 			#endregion
 
 			#region Generate Password
+			/// <summary>
+			/// Method gives 8-16 character password
+			/// </summary>
+			/// <returns></returns>
 			public static string GeneratePassword()
 
 			{
@@ -234,6 +244,11 @@ namespace CalorimeterUI
 
 				return new string(password);
 			}
+			/// <summary>
+			/// Method Check Special Character
+			/// </summary>
+			/// <param name="c"></param>
+			/// <returns></returns>
 			public static bool IsSpecialCharacter(char c)
 
 			{
@@ -265,6 +280,26 @@ namespace CalorimeterUI
 			}
 			#endregion
 
+			#region Textbox input check int process 
+			/// <summary>
+			/// Method gives textbox input only int.
+			/// </summary>
+			/// <param name="ctb"></param>
+
+			public static void OnlyNumberTextBox(CrownTextBox ctb)
+			{
+				if (System.Text.RegularExpressions.Regex.IsMatch(ctb.Text, "[^0-9]"))
+				{
+					ctb.Text = ctb.Text.Remove(ctb.Text.Length - 1);
+					ctb.SelectionStart = ctb.Text.Length;
+				}
+			}
+
+
+			#endregion
+
+			#region Calculate Carbonhydrate, Protein, Fat, Calorie Value.
+
 			public static decimal TotalCarbonhydrateValue;
 			public static decimal TotalProteinValue;
 			public static decimal TotalFatValue;
@@ -274,7 +309,11 @@ namespace CalorimeterUI
 			public static decimal TargetedProteinValue;
 			public static decimal TargetedFatValue;
 			public static decimal TargetedCalories;
-
+			/// <summary>
+			/// Method gives Calculate Food Calorie.
+			/// </summary>
+			/// <param name="foods"></param>
+			/// <param name="amount"></param>
 			public static void CalculateNutritionalValues(Foods foods, decimal amount)
 			{
 				TotalProteinValue += foods.ProteinValue * amount * 7.71m / 100;
@@ -282,6 +321,10 @@ namespace CalorimeterUI
 				TotalFatValue += foods.FatValue * amount * 7.71m / 100;
 				TotalCalorieValue += foods.Calories * amount / 100;
 			}
+
+			/// <summary>
+			/// Methods gives User Target Calorie By Day.
+			/// </summary>
 			public static void CalculateTargetedCalorie()
 			{
 				Users user = new Users();
@@ -316,6 +359,7 @@ namespace CalorimeterUI
 				cmb.DisplayMember = "ActivityName";
 				cmb.ValueMember = "Ratio";
 			}
+			#endregion
 
 		}
 	}

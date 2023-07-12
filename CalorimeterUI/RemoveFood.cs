@@ -55,8 +55,6 @@ namespace CalorimeterUI
 			PictureBox pictureBox = (PictureBox)sender;
 			User_Food_Meal ufm = new User_Food_Meal();
 			Foods foods = bl.Foods.Search((int)pictureBox.Tag);
-
-			//lblFoodName.Text = foods.FoodName + $": {bl.User_Food_Meal.SearchFoodHistory(SignIn.UserID).Where(x=>x.FoodID == foods.ID && x.MealID == Meals.MealId).FirstOrDefault().Amount }";
 		}
 	}
 }
