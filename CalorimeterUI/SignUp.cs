@@ -35,7 +35,7 @@ namespace CalorimeterUI
 			IsTextboxNull = FillControl(IsTextboxNull);
 			if (IsTextboxNull)
 			{
-				MessageBox.Show("Please fill all the necessary informations");
+				MessageBox.Show("Please fill all the information.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 			else if (!Methods.PasswordCheckMethod(txtPwd.Text, txtRePwd.Text))
 			{
@@ -43,24 +43,35 @@ namespace CalorimeterUI
 			else
 			{
 				Methods.VerificationCode = Methods.RandomVerificationCode();
-				string body = $"Please use the code here to verify your account <b>{Methods.VerificationCode}</b>";
-				Methods.SendEmail(body, txtName.Text, txtMail.Text);
+				string body = $"<h1>Please use the code here to verify your account <b>{Methods.VerificationCode}</b><h1>";
 
-				EmailVerificationForm evf = new EmailVerificationForm();
-				evf.Owner = this;
-				evf.ShowDialog();
-				string hashedPass = Methods.GenerateHash(txtPwd.Text);
-				if (evf.ItIsAMatch)
+				BusinessLayer bl = new BusinessLayer();
+				if (bl.Users.Search(txtMail.Text) == null)
 				{
-					BusinessLayer bl = new BusinessLayer();
-					bl.Users.Add(new Users()
+					Methods.SendEmail(body, txtName.Text, txtMail.Text, "Verification Code");
+
+					EmailVerificationForm evf = new EmailVerificationForm();
+					evf.Owner = this;
+					evf.ShowDialog();
+					string hashedPass = Methods.GenerateHash(txtPwd.Text);
+					if (evf.ItIsAMatch)
 					{
-						FirstName = txtName.Text,
-						LastName = txtSurname.Text,
-						Email = txtMail.Text,
-						Password = hashedPass
-					});
-					BusinessLayer._db.SaveChanges();
+						Users user = new Users()
+						{
+							FirstName = txtName.Text,
+							LastName = txtSurname.Text,
+							Email = txtMail.Text,
+							Password = hashedPass
+						};
+						bl.Users.Add(user);
+						bl.UserDetails.Add(new UserDetails() { UserID = user.ID });
+						BusinessLayer._db.SaveChanges();
+					}
+					this.Close();
+				}
+				else
+				{
+					MessageBox.Show("This email already exists.");
 				}
 			}
 

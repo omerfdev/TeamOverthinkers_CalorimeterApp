@@ -31,13 +31,13 @@
 			components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgetPassword));
 			btnSend = new DrakeUI.Framework.DrakeUIButton();
-			pcEmail = new PictureBox();
+			pbCheckMail = new PictureBox();
 			lblMail = new Label();
-			txtEmail = new ReaLTaiizor.Controls.DungeonTextBox();
+			txtMail = new ReaLTaiizor.Controls.DungeonTextBox();
 			pbBack = new ReaLTaiizor.Controls.ParrotPictureBox();
-			errorProviderForgetPassword = new ErrorProvider(components);
-			((System.ComponentModel.ISupportInitialize)pcEmail).BeginInit();
-			((System.ComponentModel.ISupportInitialize)errorProviderForgetPassword).BeginInit();
+			errorProviderEmail = new ErrorProvider(components);
+			((System.ComponentModel.ISupportInitialize)pbCheckMail).BeginInit();
+			((System.ComponentModel.ISupportInitialize)errorProviderEmail).BeginInit();
 			SuspendLayout();
 			// 
 			// btnSend
@@ -48,7 +48,7 @@
 			btnSend.FillSelectedColor = Color.DarkKhaki;
 			btnSend.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
 			btnSend.ForeColor = Color.Khaki;
-			btnSend.Location = new Point(166, 230);
+			btnSend.Location = new Point(183, 235);
 			btnSend.Name = "btnSend";
 			btnSend.RectColor = Color.DarkKhaki;
 			btnSend.RectDisableColor = Color.FromArgb(227, 242, 253);
@@ -59,44 +59,44 @@
 			btnSend.Text = "Send";
 			btnSend.Click += btnSend_Click;
 			// 
-			// pcEmail
+			// pbCheckMail
 			// 
-			pcEmail.BackColor = Color.Transparent;
-			pcEmail.Image = (Image)resources.GetObject("pcEmail.Image");
-			pcEmail.Location = new Point(315, 191);
-			pcEmail.Name = "pcEmail";
-			pcEmail.Size = new Size(30, 29);
-			pcEmail.SizeMode = PictureBoxSizeMode.StretchImage;
-			pcEmail.TabIndex = 57;
-			pcEmail.TabStop = false;
-			pcEmail.Visible = false;
+			pbCheckMail.BackColor = Color.Transparent;
+			pbCheckMail.Image = (Image)resources.GetObject("pbCheckMail.Image");
+			pbCheckMail.Location = new Point(332, 196);
+			pbCheckMail.Name = "pbCheckMail";
+			pbCheckMail.Size = new Size(30, 29);
+			pbCheckMail.SizeMode = PictureBoxSizeMode.StretchImage;
+			pbCheckMail.TabIndex = 57;
+			pbCheckMail.TabStop = false;
+			pbCheckMail.Visible = false;
 			// 
 			// lblMail
 			// 
 			lblMail.AutoSize = true;
-			lblMail.Location = new Point(103, 164);
+			lblMail.Location = new Point(120, 169);
 			lblMail.Name = "lblMail";
 			lblMail.Size = new Size(52, 20);
 			lblMail.TabIndex = 56;
 			lblMail.Text = "E-Mail";
 			// 
-			// txtEmail
+			// txtMail
 			// 
-			txtEmail.BackColor = Color.Transparent;
-			txtEmail.BorderColor = Color.FromArgb(180, 180, 180);
-			txtEmail.EdgeColor = Color.White;
-			txtEmail.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			txtEmail.ForeColor = Color.DimGray;
-			txtEmail.Location = new Point(103, 191);
-			txtEmail.MaxLength = 200;
-			txtEmail.Multiline = false;
-			txtEmail.Name = "txtEmail";
-			txtEmail.ReadOnly = false;
-			txtEmail.Size = new Size(206, 33);
-			txtEmail.TabIndex = 55;
-			txtEmail.TextAlignment = HorizontalAlignment.Left;
-			txtEmail.UseSystemPasswordChar = false;
-			txtEmail.TextChanged += txtEmail_TextChanged;
+			txtMail.BackColor = Color.Transparent;
+			txtMail.BorderColor = Color.FromArgb(180, 180, 180);
+			txtMail.EdgeColor = Color.White;
+			txtMail.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+			txtMail.ForeColor = Color.DimGray;
+			txtMail.Location = new Point(120, 196);
+			txtMail.MaxLength = 200;
+			txtMail.Multiline = false;
+			txtMail.Name = "txtMail";
+			txtMail.ReadOnly = false;
+			txtMail.Size = new Size(206, 33);
+			txtMail.TabIndex = 55;
+			txtMail.TextAlignment = HorizontalAlignment.Left;
+			txtMail.UseSystemPasswordChar = false;
+			txtMail.TextChanged += txtMail_TextChanged;
 			// 
 			// pbBack
 			// 
@@ -113,38 +113,38 @@
 			pbBack.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
 			pbBack.IsElipse = false;
 			pbBack.IsParallax = false;
-			pbBack.Location = new Point(22, 22);
+			pbBack.Location = new Point(39, 27);
 			pbBack.Name = "pbBack";
 			pbBack.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
 			pbBack.Size = new Size(43, 34);
 			pbBack.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 			pbBack.TabIndex = 54;
-			pbBack.Text = "ppbBack";
+			pbBack.Text = "parrotPictureBox1";
 			pbBack.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			pbBack.Click += pbBack_Click;
 			pbBack.MouseEnter += pbBack_MouseEnter;
 			pbBack.MouseLeave += pbBack_MouseLeave;
 			// 
-			// errorProviderForgetPassword
+			// errorProviderEmail
 			// 
-			errorProviderForgetPassword.ContainerControl = this;
+			errorProviderEmail.ContainerControl = this;
 			// 
 			// ForgetPassword
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(448, 450);
+			ClientSize = new Size(507, 396);
 			Controls.Add(btnSend);
-			Controls.Add(pcEmail);
+			Controls.Add(pbCheckMail);
 			Controls.Add(lblMail);
-			Controls.Add(txtEmail);
+			Controls.Add(txtMail);
 			Controls.Add(pbBack);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "ForgetPassword";
-			Text = "ForgetPassword";
-			Load += ForgetPassword_Load;
-			((System.ComponentModel.ISupportInitialize)pcEmail).EndInit();
-			((System.ComponentModel.ISupportInitialize)errorProviderForgetPassword).EndInit();
+			Text = "ResetPassword";
+			Load += ResetPassword_Load;
+			((System.ComponentModel.ISupportInitialize)pbCheckMail).EndInit();
+			((System.ComponentModel.ISupportInitialize)errorProviderEmail).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -152,10 +152,10 @@
 		#endregion
 
 		private DrakeUI.Framework.DrakeUIButton btnSend;
-		private PictureBox pcEmail;
+		private PictureBox pbCheckMail;
 		private Label lblMail;
-		private ReaLTaiizor.Controls.DungeonTextBox txtEmail;
+		private ReaLTaiizor.Controls.DungeonTextBox txtMail;
 		private ReaLTaiizor.Controls.ParrotPictureBox pbBack;
-		private ErrorProvider errorProviderForgetPassword;
+		private ErrorProvider errorProviderEmail;
 	}
 }
