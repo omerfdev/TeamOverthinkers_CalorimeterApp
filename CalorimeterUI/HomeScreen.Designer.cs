@@ -128,6 +128,7 @@
 			btnHome.Padding = new Padding(5, 0, 0, 0);
 			btnHome.Size = new Size(247, 81);
 			btnHome.TabIndex = 4;
+			btnHome.Tag = "1";
 			btnHome.Text = "                 Home";
 			btnHome.TextAlign = ContentAlignment.MiddleRight;
 			btnHome.UseVisualStyleBackColor = false;
@@ -155,6 +156,7 @@
 			btnUserInfo.Padding = new Padding(5, 0, 0, 0);
 			btnUserInfo.Size = new Size(247, 81);
 			btnUserInfo.TabIndex = 4;
+			btnUserInfo.Tag = "2";
 			btnUserInfo.Text = "              User Info";
 			btnUserInfo.TextAlign = ContentAlignment.MiddleRight;
 			btnUserInfo.UseVisualStyleBackColor = false;
@@ -182,6 +184,7 @@
 			btnMeals.Padding = new Padding(5, 0, 0, 0);
 			btnMeals.Size = new Size(247, 81);
 			btnMeals.TabIndex = 4;
+			btnMeals.Tag = "3";
 			btnMeals.Text = "                 Meals";
 			btnMeals.TextAlign = ContentAlignment.MiddleRight;
 			btnMeals.UseVisualStyleBackColor = false;
@@ -209,10 +212,11 @@
 			btnSettings.Padding = new Padding(5, 0, 0, 0);
 			btnSettings.Size = new Size(247, 81);
 			btnSettings.TabIndex = 4;
+			btnSettings.Tag = "4";
 			btnSettings.Text = "                 Settings";
 			btnSettings.TextAlign = ContentAlignment.MiddleRight;
 			btnSettings.UseVisualStyleBackColor = false;
-			btnSettings.Click += btnSettings_Click;
+	
 			// 
 			// pnlContact
 			// 
@@ -237,6 +241,7 @@
 			btnContact.Padding = new Padding(5, 0, 0, 0);
 			btnContact.Size = new Size(247, 81);
 			btnContact.TabIndex = 8;
+			btnContact.Tag = "5";
 			btnContact.Text = "                 Contact";
 			btnContact.TextAlign = ContentAlignment.MiddleRight;
 			btnContact.UseVisualStyleBackColor = false;

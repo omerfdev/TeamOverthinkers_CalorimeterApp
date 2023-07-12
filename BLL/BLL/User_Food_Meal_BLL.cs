@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BLL.BLL
 {
@@ -35,5 +36,14 @@ namespace BLL.BLL
             user_Food_Meal.Amount = entity.Amount;
             BusinessLayer._db.SaveChanges();
         }
-    }
+		public IQueryable<User_Food_Meal> Include()
+		{
+			return BusinessLayer._db.UserFoodMealTable.Include(x => x.Foods);
+		}
+		public IQueryable<User_Food_Meal> SearchFoodHistory(int id)
+		{
+			return Include()
+				.Where(x => x.CreateDate.Value.Date == DateTime.Now.Date && x.UserID == id);
+		}
+	}
 }

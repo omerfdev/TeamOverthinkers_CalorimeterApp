@@ -72,14 +72,65 @@ namespace CalorimeterUI
 			}
 		}
 		#endregion
-		private void btnSettings_Click(object sender, EventArgs e)
-		{
-
-		}
+		
 
 		private void HomeScreen_Load(object sender, EventArgs e)
 		{
 			flwSideBar.Width = flwSideBar.MinimumSize.Width;
+			btnHome.Click += Click;
+			btnUserInfo.Click += Click;
+			btnMeals.Click += Click;
+			btnSettings.Click += Click;
+			btnContact.Click += Click;
+		}
+		public void OpenForm(Form childForm)
+		{
+			bool situation = false;
+			foreach (Form form in this.MdiChildren)
+			{
+
+				if (form.Text == childForm.Text)
+				{
+					situation = true;
+					form.Activate();
+				}
+				else
+				{
+					form.Close();
+				}
+			}
+			if (situation == false)
+			{
+				childForm.MdiParent = this;
+				childForm.Dock = DockStyle.Right;
+				childForm.Show();
+			}
+		}
+		private void Click(object sender, EventArgs e)
+		{
+			Button button = (Button)sender;
+			switch (button.Tag)
+			{
+				case "1":
+					OpenForm(new Home());
+					break;
+				case "2":
+					OpenForm(new UserInfo());
+					break;
+				case "3":
+					OpenForm(new Meals());
+					break;
+				case "4":
+					OpenForm(new Settings());
+					break;
+				case "5":
+					OpenForm(new About());
+					break;
+				case "6":
+					this.Close();
+					this.Owner.Show();
+					break;
+			}
 		}
 	}
 }
