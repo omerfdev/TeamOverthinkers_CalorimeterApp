@@ -25,8 +25,12 @@ namespace BLL.BLL
         {
             return BusinessLayer._db.UserTable.Find(id);
         }
+		public Users Search(string mail)
+		{
+			return BusinessLayer._db.UserTable.FirstOrDefault(x => x.Email == mail);
+		}
 
-        public void Update(Users entity)
+		public void Update(Users entity)
         {
             Users user = Search(entity.ID);
             BusinessLayer._db.Entry(user).State = Microsoft.EntityFrameworkCore.EntityState.Modified;

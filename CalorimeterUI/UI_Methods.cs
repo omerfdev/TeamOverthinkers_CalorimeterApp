@@ -1,4 +1,5 @@
 ﻿using MimeKit;
+using MimeKit.Utils;
 using ReaLTaiizor.Controls;
 using System.Security.Cryptography;
 using System.Text;
@@ -22,24 +23,31 @@ namespace CalorimeterUI
 			#endregion
 
 			#region Send Email process
-			public static void SendEmail(string body, string name, string mail)
+			public static void SendEmail(string body, string name, string mail, string subject)
 			{
+				BodyBuilder builder = new BodyBuilder();
 				var email = new MimeMessage();
 
-				email.From.Add(new MailboxAddress("CaloriMeterApp", "overthinkersapp@gmail.com"));
+				email.From.Add(new MailboxAddress("CaloriMeterApp", "overthinkerst@gmail.com"));
 				email.To.Add(new MailboxAddress(name, mail));
 
-				email.Subject = "Email Verification";
-				email.Body = new TextPart(MimeKit.Text.TextFormat.Html)
-				{
-					Text = body
-				};
+				email.Subject = subject;
+
+				var image = builder.LinkedResources.Add("..\\..\\..\\Resources\\cute-avacado.png");
+				image.ContentId = MimeUtils.GenerateMessageId();
+				builder.HtmlBody = string.Format(@$"{body}<center><img src=""cid:{0}""></center>", image.ContentId);
+				email.Body = builder.ToMessageBody();
 				using (var smtp = new SmtpClient())
 				{
 					smtp.Connect("smtp.gmail.com", 587, false);
+
+					// Note: only needed if the SMTP server requires authentication
 					smtp.Authenticate("overthinkersapp@gmail.com", "kobmseidvyjqmnqg");
+
 					smtp.Send(email);
 					smtp.Disconnect(true);
+
+
 				}
 			}
 			#endregion
