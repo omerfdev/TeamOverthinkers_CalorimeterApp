@@ -44,6 +44,8 @@
 			btnSettings = new Button();
 			pnlContact = new Panel();
 			btnContact = new Button();
+			pnlLogout = new Panel();
+			btnLogout = new Button();
 			timerSideBar = new System.Windows.Forms.Timer(components);
 			flwSideBar.SuspendLayout();
 			pnlMenu.SuspendLayout();
@@ -53,6 +55,7 @@
 			pnlMeals.SuspendLayout();
 			pnlSettings.SuspendLayout();
 			pnlContact.SuspendLayout();
+			pnlLogout.SuspendLayout();
 			SuspendLayout();
 			// 
 			// flwSideBar
@@ -64,6 +67,7 @@
 			flwSideBar.Controls.Add(pnlMeals);
 			flwSideBar.Controls.Add(pnlSettings);
 			flwSideBar.Controls.Add(pnlContact);
+			flwSideBar.Controls.Add(pnlLogout);
 			flwSideBar.Dock = DockStyle.Left;
 			flwSideBar.Location = new Point(0, 0);
 			flwSideBar.MaximumSize = new Size(280, 900);
@@ -216,7 +220,6 @@
 			btnSettings.Text = "                 Settings";
 			btnSettings.TextAlign = ContentAlignment.MiddleRight;
 			btnSettings.UseVisualStyleBackColor = false;
-	
 			// 
 			// pnlContact
 			// 
@@ -246,6 +249,34 @@
 			btnContact.TextAlign = ContentAlignment.MiddleRight;
 			btnContact.UseVisualStyleBackColor = false;
 			// 
+			// pnlLogout
+			// 
+			pnlLogout.Controls.Add(btnLogout);
+			pnlLogout.Location = new Point(3, 632);
+			pnlLogout.MaximumSize = new Size(263, 258);
+			pnlLogout.MinimumSize = new Size(263, 93);
+			pnlLogout.Name = "pnlLogout";
+			pnlLogout.Size = new Size(263, 113);
+			pnlLogout.TabIndex = 9;
+			// 
+			// btnLogout
+			// 
+			btnLogout.BackColor = Color.DarkOliveGreen;
+			btnLogout.FlatStyle = FlatStyle.Flat;
+			btnLogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnLogout.ForeColor = Color.Transparent;
+			btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
+			btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+			btnLogout.Location = new Point(3, 12);
+			btnLogout.Name = "btnLogout";
+			btnLogout.Padding = new Padding(5, 0, 0, 0);
+			btnLogout.Size = new Size(247, 81);
+			btnLogout.TabIndex = 8;
+			btnLogout.Tag = "6";
+			btnLogout.Text = "                 Logout";
+			btnLogout.TextAlign = ContentAlignment.MiddleRight;
+			btnLogout.UseVisualStyleBackColor = false;
+			// 
 			// timerSideBar
 			// 
 			timerSideBar.Interval = 1;
@@ -257,7 +288,7 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.OliveDrab;
 			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-			ClientSize = new Size(917, 628);
+			ClientSize = new Size(917, 775);
 			Controls.Add(flwSideBar);
 			FormBorderStyle = FormBorderStyle.None;
 			IsMdiContainer = true;
@@ -275,6 +306,7 @@
 			pnlMeals.ResumeLayout(false);
 			pnlSettings.ResumeLayout(false);
 			pnlContact.ResumeLayout(false);
+			pnlLogout.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -299,6 +331,7 @@
 		private Panel pnlContact;
 		private Button btnContact;
 		private System.Windows.Forms.Timer timerSideBar;
-
+		private Panel pnlLogout;
+		private Button btnLogout;
 	}
 }

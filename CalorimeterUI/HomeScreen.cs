@@ -72,8 +72,6 @@ namespace CalorimeterUI
 			}
 		}
 		#endregion
-		
-
 		private void HomeScreen_Load(object sender, EventArgs e)
 		{
 			flwSideBar.Width = flwSideBar.MinimumSize.Width;
@@ -82,6 +80,7 @@ namespace CalorimeterUI
 			btnMeals.Click += Click;
 			btnSettings.Click += Click;
 			btnContact.Click += Click;
+			btnLogout.Click += Click;
 		}
 		public void OpenForm(Form childForm)
 		{
@@ -129,6 +128,27 @@ namespace CalorimeterUI
 				case "6":
 					this.Close();
 					this.Owner.Show();
+					break;
+			}
+		}
+		public void ClickPublic(object sender)
+		{
+			switch (sender)
+			{
+				case "1":
+					OpenForm(new Home());
+					break;
+				case "2":
+					OpenForm(new UserInfo());
+					break;
+				case "3":
+					OpenForm(new Meals());
+					break;
+				case "4":
+					OpenForm(new Settings());
+					break;
+				case "5":
+					OpenForm(new About());
 					break;
 			}
 		}

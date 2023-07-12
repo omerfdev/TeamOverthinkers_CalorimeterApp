@@ -164,6 +164,18 @@
         3TiJri9nI5F8kCTfNrCbuKntjTMAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAVxJREFUaEPtmUFqQkEQRP9BknX28XBxp8tcJUHIxVSMF0iqCB+kmC92lzNjYB48
+        cDFd3T2JKP5pMBgMHppnuINn+NNY9vyCLzAFhz/AUnhLj5CzhOHNlwJ7+AnD9Pi3WfIbhtGQ1tj97QAT
+        u78dYGL3twNM7P5uwBa+/71M4fa3Ajj8XJdd4rI3DZMNWEOt5UJRNCNMNuAVlj7Bo38JrW/KPZbQ2uZw
+        CX6P0UFuXULrurCC2SW0phvZJfR8GA2o4bUl9GwYDajl0hJ6LowG1HIDS+i5MBpQw6XhiZ7txtKb+Nrw
+        RM93ITs80ZrmOMMTrWuKOzzR2jDZgHsMT7Q+TDbg33+dJm9wrove/MxlbxrGDeCtZ25+xu3vB5jY/e0A
+        E7u/HWBi97cDTOz+j/Tj7gmG4cOFUlgPP2AYPhkpfaK2dg+fYAo+GeHDBf4+XwqvKXvy5tPDDwaDQW2m
+        6Rd3k3HXqOm44wAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="timerSideBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
