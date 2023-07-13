@@ -31,12 +31,12 @@ namespace CalorimeterUI
 				BodyBuilder builder = new BodyBuilder();
 				var email = new MimeMessage();
 
-				email.From.Add(new MailboxAddress("CaloriMeterApp", "overthinkerst@gmail.com"));
+				email.From.Add(new MailboxAddress("CaloriMeterApp", "appoverthinkers@gmail.com"));
 				email.To.Add(new MailboxAddress(name, mail));
 
 				email.Subject = subject;
 
-				var image = builder.LinkedResources.Add("..\\..\\..\\Resources\\cute-avacado.png");
+				var image = builder.LinkedResources.Add("..\\..\\..\\Image\\cute-avacado.png");
 				image.ContentId = MimeUtils.GenerateMessageId();
 				builder.HtmlBody = string.Format(@$"{body}<center><img src=""cid:{0}""></center>", image.ContentId);
 				email.Body = builder.ToMessageBody();
@@ -45,7 +45,7 @@ namespace CalorimeterUI
 					smtp.Connect("smtp.gmail.com", 587, false);
 
 					// Note: only needed if the SMTP server requires authentication
-					smtp.Authenticate("overthinkersapp@gmail.com", "kobmseidvyjqmnqg");
+					smtp.Authenticate("appoverthinkers@gmail.com", "rkzdlfwuohkkjjzb");
 
 					smtp.Send(email);
 					smtp.Disconnect(true);
