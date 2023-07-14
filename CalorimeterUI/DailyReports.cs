@@ -19,7 +19,9 @@ namespace CalorimeterUI
 			InitializeComponent();
 		}
 		BusinessLayer bl = new BusinessLayer();
+
 		#region Button WeaklyMeal Process
+		
 		private void btnWeeklyMeal_Click(object sender, EventArgs e)
 		{
 			var weeklyComparison = bl.User_Food_Meal.GetAll()
@@ -31,6 +33,7 @@ namespace CalorimeterUI
 		}
 		#endregion
 
+		#region Button MontlyMeal Process
 		private void btnMonthlyMeal_Click(object sender, EventArgs e)
 		{
 			var result = bl.User_Food_Meal.GetAll();
@@ -41,7 +44,9 @@ namespace CalorimeterUI
 				.ToList();
 			dgvReports.DataSource = monthlyComparison;
 		}
+		#endregion
 
+		#region Button WeeklyFoods Process
 		private void btnWeeklyFoods_Click(object sender, EventArgs e)
 		{
 			var weeklyFoodComparison = bl.User_Food_Meal.GetAll()
@@ -50,7 +55,9 @@ namespace CalorimeterUI
 			  .ToList();
 			dgvReports.DataSource = weeklyFoodComparison;
 		}
+		#endregion
 
+		#region Button MonthlyFoods Process 
 		private void btnMonthlyFoods_Click(object sender, EventArgs e)
 		{
 			var monthlyFoodComparison = bl.User_Food_Meal.GetAll()
@@ -60,5 +67,6 @@ namespace CalorimeterUI
 					.ToList();
 			dgvReports.DataSource = monthlyFoodComparison;
 		}
+		#endregion
 	}
 }

@@ -375,6 +375,21 @@ namespace CalorimeterUI
 
 			}
 			#endregion
+
+			#region TextBox Check Inputs.
+			/// <summary>
+			/// Method gives TextBox Inputs Check Only Number.
+			/// </summary>
+			/// <param name="txt"></param>
+			public static void OnlyNumberTextBox(TextBox txt)
+			{
+				if (System.Text.RegularExpressions.Regex.IsMatch(txt.Text, "[^0-9]"))
+				{
+					txt.Text = txt.Text.Remove(txt.Text.Length - 1);
+					txt.SelectionStart = txt.Text.Length;
+				}
+			}
+			#endregion
 		}
 	}
 }

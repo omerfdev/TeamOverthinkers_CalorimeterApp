@@ -16,5 +16,6 @@ namespace CalorimeterUI
 		{
 			InitializeComponent();
 		}
+		public static int CategoryID = 0;
 	}
 }

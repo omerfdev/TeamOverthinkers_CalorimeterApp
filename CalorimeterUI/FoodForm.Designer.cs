@@ -31,7 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodForm));
 			txtAmount = new TextBox();
 			lblCalories = new Label();
-			flowLayoutPanel1 = new FlowLayoutPanel();
+			flwFood = new FlowLayoutPanel();
 			btnMinimize = new DrakeUI.Framework.DrakeUILabel();
 			btnExit = new DrakeUI.Framework.DrakeUILabel();
 			lblShowCalories = new Label();
@@ -64,15 +64,15 @@
 			lblCalories.Text = "Calories:";
 			lblCalories.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// flowLayoutPanel1
+			// flwFood
 			// 
-			flowLayoutPanel1.AutoScroll = true;
-			flowLayoutPanel1.BackColor = Color.Transparent;
-			flowLayoutPanel1.Location = new Point(77, 58);
-			flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
-			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(267, 324);
-			flowLayoutPanel1.TabIndex = 61;
+			flwFood.AutoScroll = true;
+			flwFood.BackColor = Color.Transparent;
+			flwFood.Location = new Point(77, 58);
+			flwFood.Margin = new Padding(3, 4, 3, 4);
+			flwFood.Name = "flwFood";
+			flwFood.Size = new Size(267, 324);
+			flwFood.TabIndex = 61;
 			// 
 			// btnMinimize
 			// 
@@ -80,7 +80,7 @@
 			btnMinimize.Cursor = Cursors.Hand;
 			btnMinimize.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
 			btnMinimize.ForeColor = Color.Olive;
-			btnMinimize.Location = new Point(544, 23);
+			btnMinimize.Location = new Point(543, 9);
 			btnMinimize.Name = "btnMinimize";
 			btnMinimize.Size = new Size(32, 45);
 			btnMinimize.TabIndex = 68;
@@ -96,7 +96,7 @@
 			btnExit.Cursor = Cursors.Hand;
 			btnExit.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
 			btnExit.ForeColor = Color.Olive;
-			btnExit.Location = new Point(582, 23);
+			btnExit.Location = new Point(581, 9);
 			btnExit.Name = "btnExit";
 			btnExit.Size = new Size(32, 44);
 			btnExit.TabIndex = 67;
@@ -196,7 +196,7 @@
 			ClientSize = new Size(677, 470);
 			Controls.Add(txtAmount);
 			Controls.Add(lblCalories);
-			Controls.Add(flowLayoutPanel1);
+			Controls.Add(flwFood);
 			Controls.Add(btnMinimize);
 			Controls.Add(btnExit);
 			Controls.Add(lblShowCalories);
@@ -207,6 +207,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "FoodForm";
 			Text = "FoodForm";
+			Load += FoodForm_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -215,7 +216,7 @@
 
 		private TextBox txtAmount;
 		private Label lblCalories;
-		private FlowLayoutPanel flowLayoutPanel1;
+		private FlowLayoutPanel flwFood;
 		private DrakeUI.Framework.DrakeUILabel btnMinimize;
 		private DrakeUI.Framework.DrakeUILabel btnExit;
 		private Label lblShowCalories;
