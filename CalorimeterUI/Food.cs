@@ -236,6 +236,7 @@ namespace AdminConsole
 		}
 		#endregion
 
+		#region dgvFood Cell Mouse Double Click Process
 		private void dgvFood_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			int rowIndex = e.RowIndex;
@@ -255,5 +256,6 @@ namespace AdminConsole
 				pictureBox1.Image = Image.FromFile(txtFoodImagePath.Text);
 			}
 		}
+		#endregion
 	}
 }
