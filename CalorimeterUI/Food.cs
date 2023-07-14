@@ -22,6 +22,7 @@ namespace AdminConsole
 		}
 		BusinessLayer bll = new BusinessLayer();
 
+		#region Food Form Load Process
 		private void Food_Load(object sender, EventArgs e)
 		{
 			DGVFill();
@@ -29,14 +30,21 @@ namespace AdminConsole
 			txtFoodImagePath.Enabled = false;
 			txtFoodCategoryID.Enabled = false;
 		}
+		#endregion
 
+		#region dgvFood Data Fill Process
+		/// <summary>
+		/// Method gives dgvFood data fill. 
+		/// </summary>
 		private void DGVFill()
 		{
 			dgvFood.DataSource = null;
 			var result = bll.Foods.GetAll().Select(x => new { x.ID, x.FoodName, x.CategoryID, x.CarbonHydrateValue, x.ProteinValue, x.FatValue, x.Calories, x.FoodImagePath, x.FoodDescription, x.IsActive }).ToList();
 			dgvFood.DataSource = result;
 		}
+		#endregion
 
+		#region Button Add Process
 		private void btnCategoryAdd_Click(object sender, EventArgs e)
 		{
 			Foods food = new Foods();
@@ -72,10 +80,12 @@ namespace AdminConsole
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("The product is not added.");
+				MessageBox.Show("The food is not added.");
 			}
 		}
+		#endregion
 
+		#region Button Delete Process
 		private void btnCategoryDelete_Click(object sender, EventArgs e)
 		{
 			int selectedID = GetSelectedIDFromDataGridView();
@@ -84,11 +94,11 @@ namespace AdminConsole
 			if (food != null)
 			{
 				foods_BLL.Delete(food);
-				MessageBox.Show("The product is deleted.");
+				MessageBox.Show("The food is deleted.");
 			}
 			else
 			{
-				MessageBox.Show("the product does not found.");
+				MessageBox.Show("the food does not found.");
 			}
 
 			pictureBox1.Image = null;
@@ -99,7 +109,9 @@ namespace AdminConsole
 			ClearControls();
 			DGVFill();
 		}
+		#endregion
 
+		#region Button Update Process
 		private void btnCategoryUpdate_Click(object sender, EventArgs e)
 		{
 			int rowIndex = dgvFood.CurrentRow.Index;
@@ -140,8 +152,12 @@ namespace AdminConsole
 			ClearControls();
 			DGVFill();
 		}
+		#endregion
 
-
+		#region Food Form Controls Inputs Clear Process
+		/// <summary>
+		/// Method gives Food Form Controls Input Clear
+		/// </summary>
 		private void ClearControls()
 		{
 			txtFoodID.Text = string.Empty;
@@ -156,6 +172,13 @@ namespace AdminConsole
 			chkIsActive.Checked = true;
 			pictureBox1.Image = null;
 		}
+		#endregion
+
+		#region dgvFood Selected Row ID
+		/// <summary>
+		/// Method gives dgvFood selected row ID
+		/// </summary>
+		/// <returns></returns>
 		private int GetSelectedIDFromDataGridView()
 		{
 			int selectedID = 0;
@@ -169,12 +192,11 @@ namespace AdminConsole
 					selectedID = Convert.ToInt32(selectedRow.Cells["ID"].Value);
 				}
 			}
-
 			return selectedID;
 		}
+		#endregion
 
-
-
+		#region Button Add Picture Process
 		private void btnAddPicture_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog ofd = new OpenFileDialog();
@@ -190,13 +212,17 @@ namespace AdminConsole
 				txtFoodImagePath.Text = "..\\..\\..\\Image\\Images\\" + foodCategoryID + "\\" + foodName + ".jpg";
 			}
 		}
+		#endregion
 
+		#region Button Refresh Process
 		private void btnRefresh_Click(object sender, EventArgs e)
 		{
 			ClearControls();
 			DGVFill();
 		}
+		#endregion
 
+		#region Button Category Name Show Process
 		private void btnCategoryNameShow_Click(object sender, EventArgs e)
 		{
 			string text = "";
@@ -208,29 +234,25 @@ namespace AdminConsole
 			MessageBox.Show(text);
 			txtFoodCategoryID.Enabled = true;
 		}
+		#endregion
 
-		private void dgvFood_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvFood_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			int rowIndex = e.RowIndex;
 			if (rowIndex >= 0 && rowIndex < dgvFood.Rows.Count)
 			{
 				DataGridViewRow selectedRow = dgvFood.Rows[rowIndex];
-
 				txtFoodID.Text = selectedRow.Cells["ID"].Value.ToString();
 				txtFoodName.Text = selectedRow.Cells["FoodName"].Value.ToString();
 				txtFoodCategoryID.Text = selectedRow.Cells["CategoryID"].Value.ToString();
 				txtFoodImagePath.Text = selectedRow.Cells["FoodImagePath"].Value.ToString();
 				txtFoodDescription.Text = selectedRow.Cells["FoodDescription"].Value.ToString();
-
 				chkIsActive.Checked = Convert.ToBoolean(selectedRow.Cells["IsActive"].Value);
 				nmrCalories.Value = Convert.ToDecimal(selectedRow.Cells["Calories"].Value);
 				nmrCarbonhydrateValue.Value = Convert.ToDecimal(selectedRow.Cells["CarbonhydrateValue"].Value);
 				nmrFatValue.Value = Convert.ToDecimal(selectedRow.Cells["FatValue"].Value);
 				nmrProteinValue.Value = Convert.ToDecimal(selectedRow.Cells["ProteinValue"].Value);
-
-				//bring picture to picturebox:
 				pictureBox1.Image = Image.FromFile(txtFoodImagePath.Text);
-
 			}
 		}
 	}

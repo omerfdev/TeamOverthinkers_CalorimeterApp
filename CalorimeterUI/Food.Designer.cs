@@ -86,7 +86,7 @@
 			dgvFood.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			dgvFood.Size = new Size(735, 308);
 			dgvFood.TabIndex = 98;
-			dgvFood.CellContentDoubleClick += dgvFood_CellContentDoubleClick;
+			dgvFood.CellMouseDoubleClick += dgvFood_CellMouseDoubleClick;
 			// 
 			// btnCategoryUpdate
 			// 
