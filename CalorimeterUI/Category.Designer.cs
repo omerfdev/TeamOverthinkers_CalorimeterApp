@@ -225,7 +225,7 @@
 			dgvCategories.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			dgvCategories.Size = new Size(776, 308);
 			dgvCategories.TabIndex = 84;
-			dgvCategories.CellContentDoubleClick += dgvCategories_CellContentDoubleClick;
+			dgvCategories.CellMouseDoubleClick += dgvCategories_CellMouseDoubleClick;
 			// 
 			// chkIsActive
 			// 
