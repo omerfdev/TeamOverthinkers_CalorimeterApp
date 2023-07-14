@@ -16,5 +16,10 @@ namespace CalorimeterUI
 		{
 			InitializeComponent();
 		}
+
+		private void pbGitHub_Click(object sender, EventArgs e)
+		{
+			UI_Methods.Methods.OpenBrowser("https://github.com/omerfdev");
+		}
 	}
 }

@@ -4,6 +4,7 @@ using Entities;
 using MimeKit;
 using MimeKit.Utils;
 using ReaLTaiizor.Controls;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -361,6 +362,19 @@ namespace CalorimeterUI
 			}
 			#endregion
 
+			#region Open Browser
+			public static void OpenBrowser(string url)
+			{
+				Task.Delay(2000);
+
+				Process.Start(new ProcessStartInfo
+				{
+					FileName = url,
+					UseShellExecute = true
+				});
+
+			}
+			#endregion
 		}
 	}
 }
