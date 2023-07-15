@@ -21,7 +21,7 @@ namespace CalorimeterUI
 		BusinessLayer bl = new BusinessLayer();
 
 		#region Button WeaklyMeal Process
-		
+
 		private void btnWeeklyMeal_Click(object sender, EventArgs e)
 		{
 			var weeklyComparison = bl.User_Food_Meal.GetAll()
@@ -68,5 +68,14 @@ namespace CalorimeterUI
 			dgvReports.DataSource = monthlyFoodComparison;
 		}
 		#endregion
+
+		private void DailyReports_Load(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
+		}
 	}
 }

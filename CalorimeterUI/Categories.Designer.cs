@@ -95,6 +95,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Categories";
 			Text = "Categories";
+			Load += Categories_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}

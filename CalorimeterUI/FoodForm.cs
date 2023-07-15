@@ -114,6 +114,11 @@ namespace CalorimeterUI
 		#region Food Form Load Process
 		private void FoodForm_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			FillFoods();
 			txtAmount.Enabled = false;
 		}

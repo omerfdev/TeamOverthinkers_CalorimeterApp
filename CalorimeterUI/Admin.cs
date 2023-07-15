@@ -1,4 +1,5 @@
 ﻿using AdminCategory;
+using CalorimeterUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,15 @@ namespace AdminConsole
 		{
 			Food food = new Food();
 			food.ShowDialog();
+		}
+
+		private void Admin_Load(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 		}
 	}
 }

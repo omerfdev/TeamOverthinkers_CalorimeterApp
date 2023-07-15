@@ -1,5 +1,6 @@
 using BLL;
 using BLL.BLL;
+using CalorimeterUI;
 using Entities;
 using System.Data;
 
@@ -16,6 +17,11 @@ namespace AdminCategory
 		#region Category Form Load Event Process 
 		private void Category_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			GridFill();
 			chkIsActive.Checked = true;
 			txtCategoryID.Enabled = false;

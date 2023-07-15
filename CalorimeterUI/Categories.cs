@@ -17,5 +17,14 @@ namespace CalorimeterUI
 			InitializeComponent();
 		}
 		public static int CategoryID = 0;
+
+		private void Categories_Load(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
+		}
 	}
 }

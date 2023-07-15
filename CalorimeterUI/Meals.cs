@@ -26,6 +26,11 @@ namespace CalorimeterUI
 		#region Meals Form Load Process 
 		private void Meals_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			dtNow.Value = DateTime.Now;
 			btnAddBreakfast.Click += Click;
 			btnAddLunch.Click += Click;

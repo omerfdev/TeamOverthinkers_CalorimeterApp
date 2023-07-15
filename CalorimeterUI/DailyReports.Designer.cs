@@ -107,6 +107,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "DailyReports";
 			Text = "DailyReports";
+			Load += DailyReports_Load;
 			((System.ComponentModel.ISupportInitialize)dgvReports).EndInit();
 			ResumeLayout(false);
 		}

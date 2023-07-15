@@ -101,6 +101,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "VerificationAcceptedForm";
 			Text = "VerificationAcceptedForm";
+			Load += VerificationAcceptedForm_Load;
 			((System.ComponentModel.ISupportInitialize)pbVerified).EndInit();
 			ResumeLayout(false);
 			PerformLayout();

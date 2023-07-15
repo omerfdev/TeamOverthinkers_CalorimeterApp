@@ -74,6 +74,11 @@ namespace CalorimeterUI
 		#endregion
 		private void HomeScreen_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			flwSideBar.Width = flwSideBar.MinimumSize.Width;
 			btnHome.Click += Click;
 			btnUserInfo.Click += Click;

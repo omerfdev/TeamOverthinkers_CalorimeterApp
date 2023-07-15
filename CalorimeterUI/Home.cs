@@ -24,6 +24,11 @@ namespace CalorimeterUI
 
 		private void Home_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			Methods.TotalCalorieValue = 0;
 			Methods.TotalFatValue = 0;
 			Methods.TotalProteinValue = 0;

@@ -23,7 +23,11 @@ namespace CalorimeterUI
 		#region User Info Form Load
 		private void UserInfo_Load(object sender, EventArgs e)
 		{
-
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			UI_Methods.Methods.FillCMB(cmbActivity);
 			GetUserDetails();
 		}

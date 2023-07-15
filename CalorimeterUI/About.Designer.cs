@@ -69,6 +69,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "About";
 			Text = "About";
+			Load += About_Load;
 			((System.ComponentModel.ISupportInitialize)pbAvocado).EndInit();
 			((System.ComponentModel.ISupportInitialize)pbGitHub).EndInit();
 			ResumeLayout(false);

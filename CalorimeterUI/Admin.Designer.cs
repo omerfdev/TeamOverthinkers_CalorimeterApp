@@ -81,6 +81,7 @@
 			Margin = new Padding(3, 4, 3, 4);
 			Name = "Admin";
 			Text = "Console";
+			Load += Admin_Load;
 			menuStrip1.ResumeLayout(false);
 			menuStrip1.PerformLayout();
 			ResumeLayout(false);

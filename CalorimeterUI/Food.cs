@@ -1,5 +1,6 @@
 ﻿using BLL;
 using BLL.BLL;
+using CalorimeterUI;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,6 +26,11 @@ namespace AdminConsole
 		#region Food Form Load Process
 		private void Food_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			DGVFill();
 			txtFoodID.Enabled = false;
 			txtFoodImagePath.Enabled = false;

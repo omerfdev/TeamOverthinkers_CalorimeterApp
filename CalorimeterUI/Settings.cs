@@ -47,5 +47,14 @@ namespace CalorimeterUI
 				MessageBox.Show("Old Password is incorrect.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 		}
+
+		private void Settings_Load(object sender, EventArgs e)
+		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
+		}
 	}
 }

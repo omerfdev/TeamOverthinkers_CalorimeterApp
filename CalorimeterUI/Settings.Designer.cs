@@ -230,6 +230,7 @@
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Settings";
 			Text = "Settings";
+			Load += Settings_Load;
 			grpPersonal.ResumeLayout(false);
 			grpPersonal.PerformLayout();
 			ResumeLayout(false);

@@ -48,6 +48,11 @@ namespace CalorimeterUI
 		}
 		private void RemoveFood_Load(object sender, EventArgs e)
 		{
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
+			{
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
+			}
 			BringFoods();
 		}
 		private void Click(object sender, EventArgs e)

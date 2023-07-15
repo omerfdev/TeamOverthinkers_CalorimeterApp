@@ -74,6 +74,7 @@
 			// lblMail
 			// 
 			lblMail.AutoSize = true;
+			lblMail.BackColor = Color.Transparent;
 			lblMail.Location = new Point(120, 169);
 			lblMail.Name = "lblMail";
 			lblMail.Size = new Size(52, 20);
@@ -133,6 +134,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			ClientSize = new Size(507, 396);
 			Controls.Add(btnSend);
 			Controls.Add(pbCheckMail);

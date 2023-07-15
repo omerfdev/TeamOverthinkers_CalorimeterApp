@@ -22,18 +22,13 @@ namespace CalorimeterUI
 		#region Email Verification Form Load
 		private void EmailVerificationForm_Load(object sender, EventArgs e)
 		{
-			if (SignIn.DarkMode)
+			if (SignIn.DarkMode == true) { this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplandark.png"); }
+			else
 			{
-				this.BackColor = Color.FromArgb(23, 31, 5);
+				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
 			}
-			else if (SignIn.DarkMode == false)
-			{
-				this.BackColor = Color.FromArgb(225, 233, 196);
-
-			}
-			this.Size = new Size(420, 450);
-			this.Location = this.Owner.Location;
-		}
+		}		
+		
 		#endregion
 
 		#region Send Verification Code
