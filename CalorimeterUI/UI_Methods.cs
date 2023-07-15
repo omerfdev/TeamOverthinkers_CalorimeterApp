@@ -390,6 +390,23 @@ namespace CalorimeterUI
 				}
 			}
 			#endregion
+
+			#region Home Page Fill Progress Bars
+			/// <summary>
+			/// Method gives Fill Progress Bars
+			/// </summary>
+			public static void FillCircularProgressBars()
+			{
+				BusinessLayer bll = new BusinessLayer();
+				List<User_Food_Meal> UserMeals = new List<User_Food_Meal>();
+				int userid = SignIn.UserID;
+				UserMeals = bll.User_Food_Meal.SearchFoodHistory(userid, DateTime.Now).ToList();
+				for (int i = 0; i < UserMeals.Count; i++)
+				{
+					Methods.CalculateNutritionalValues(UserMeals[i].Foods, UserMeals[i].Amount);
+				}
+			}
+			#endregion
 		}
 	}
 }

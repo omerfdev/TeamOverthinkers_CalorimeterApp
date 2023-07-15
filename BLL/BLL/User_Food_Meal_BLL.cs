@@ -45,5 +45,10 @@ namespace BLL.BLL
 			return Include()
 				.Where(x => x.CreateDate.Value.Date == DateTime.Now.Date && x.UserID == id);
 		}
+		public IQueryable<User_Food_Meal> SearchFoodHistory(int id, DateTime datetime)
+		{
+			return Include()
+				.Where(x => x.CreateDate.Value.Date == datetime.Date && x.UserID == id);
+		}
 	}
 }
