@@ -57,7 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="parrotFlatProgressBar1.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarCarbonhydrate.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EEAQAAAIwBU3lzdGVtLkNv
@@ -71,7 +71,7 @@
         /wpVLf//AAAAAAAAAgAB9v////z///8KAAAAAAAAAAAAAAAAAfX////8////CgAAAAAAAAAAAAAAAAs=
 </value>
   </data>
-  <data name="parrotFlatProgressBar1.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarCarbonhydrate.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
         c3RlbS5TaW5nbGUsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
@@ -79,7 +79,7 @@
         CAgJAgAAAAYAAAAGAAAADwIAAAAIAAAACwAAAADNzEw+zczMPpqZGT/NzEw/AACAPwAAAAAAAAAACw==
 </value>
   </data>
-  <data name="parrotFlatProgressBar2.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarProtein.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EEAQAAAIwBU3lzdGVtLkNv
@@ -93,7 +93,7 @@
         /wpVLf//AAAAAAAAAgAB9v////z///8KAAAAAAAAAAAAAAAAAfX////8////CgAAAAAAAAAAAAAAAAs=
 </value>
   </data>
-  <data name="parrotFlatProgressBar2.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarProtein.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
         c3RlbS5TaW5nbGUsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
@@ -101,7 +101,7 @@
         CAgJAgAAAAYAAAAGAAAADwIAAAAIAAAACwAAAADNzEw+zczMPpqZGT/NzEw/AACAPwAAAAAAAAAACw==
 </value>
   </data>
-  <data name="parrotFlatProgressBar3.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarFat.Colors" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EEAQAAAIwBU3lzdGVtLkNv
@@ -115,7 +115,7 @@
         /wpVLf//AAAAAAAAAgAB9v////z///8KAAAAAAAAAAAAAAAAAfX////8////CgAAAAAAAAAAAAAAAAs=
 </value>
   </data>
-  <data name="parrotFlatProgressBar3.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="progressBarFat.Positions" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
         c3RlbS5TaW5nbGUsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
@@ -127,7 +127,7 @@
   <data name="crclProgressBarDailyCalories.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAloAAAFgCAIAAADsMEDrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAABD9JREFUeF7t1UENACAMADH825oQnrPB+aBJPfTcHQD4nA4BQIcAoEMAiA4BQIcA
+        vAAADrwBlbxySQAABD9JREFUeF7t1UENACAMADH825oQnrPB+aBJPfTcHQD4nA4BQIcAoEMAiA4BQIcA
         oEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4B
         QIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMA
         iA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcA
@@ -151,7 +151,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAloAAAFgCAIAAADsMEDrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAABD9JREFUeF7t1UENACAMADH825oQnrPB+aBJPfTcHQD4nA4BQIcAoEMAiA4BQIcA
+        vAAADrwBlbxySQAABD9JREFUeF7t1UENACAMADH825oQnrPB+aBJPfTcHQD4nA4BQIcAoEMAiA4BQIcA
         oEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4B
         QIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMA
         iA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcAoEMAiA4BQIcA

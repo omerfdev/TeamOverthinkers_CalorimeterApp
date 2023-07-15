@@ -33,31 +33,32 @@
 			btnRemoveDinner = new ReaLTaiizor.Controls.CyberButton();
 			btnRemoveLunch = new ReaLTaiizor.Controls.CyberButton();
 			btnRemoveBreakfast = new ReaLTaiizor.Controls.CyberButton();
-			panel1 = new Panel();
+			pnlCarbonbydrateProteinFat = new Panel();
 			crownLabel1 = new ReaLTaiizor.Controls.CrownLabel();
-			parrotFlatProgressBar1 = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
+			progressBarCarbonhydrate = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
 			crownLabel2 = new ReaLTaiizor.Controls.CrownLabel();
-			parrotFlatProgressBar2 = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
+			progressBarProtein = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
 			crownLabel3 = new ReaLTaiizor.Controls.CrownLabel();
-			parrotFlatProgressBar3 = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
+			progressBarFat = new ReaLTaiizor.Controls.ParrotFlatProgressBar();
 			btnAddSnacks = new ReaLTaiizor.Controls.CyberButton();
 			btnAddDinner = new ReaLTaiizor.Controls.CyberButton();
 			btnAddLunch = new ReaLTaiizor.Controls.CyberButton();
 			btnAddBreakfast = new ReaLTaiizor.Controls.CyberButton();
 			crclProgressBarDailyCalories = new ReaLTaiizor.Controls.ParrotCircleProgressBar();
-			groupBox4 = new ReaLTaiizor.Controls.GroupBox();
+			grpBoxSnacks = new ReaLTaiizor.Controls.GroupBox();
 			flpSnacks = new FlowLayoutPanel();
-			groupBox3 = new ReaLTaiizor.Controls.GroupBox();
+			grpBoxDinner = new ReaLTaiizor.Controls.GroupBox();
 			flpDinner = new FlowLayoutPanel();
-			groupBox2 = new ReaLTaiizor.Controls.GroupBox();
+			grpBoxLunch = new ReaLTaiizor.Controls.GroupBox();
 			flpLunch = new FlowLayoutPanel();
-			groupBox1 = new ReaLTaiizor.Controls.GroupBox();
+			grpBreakfast = new ReaLTaiizor.Controls.GroupBox();
 			flpBreakfast = new FlowLayoutPanel();
-			panel1.SuspendLayout();
-			groupBox4.SuspendLayout();
-			groupBox3.SuspendLayout();
-			groupBox2.SuspendLayout();
-			groupBox1.SuspendLayout();
+			dtNow = new DateTimePicker();
+			pnlCarbonbydrateProteinFat.SuspendLayout();
+			grpBoxSnacks.SuspendLayout();
+			grpBoxDinner.SuspendLayout();
+			grpBoxLunch.SuspendLayout();
+			grpBreakfast.SuspendLayout();
 			SuspendLayout();
 			// 
 			// btnRemoveSnack
@@ -224,19 +225,19 @@
 			btnRemoveBreakfast.Timer_Effect_1 = 5;
 			btnRemoveBreakfast.Timer_RGB = 300;
 			// 
-			// panel1
+			// pnlCarbonbydrateProteinFat
 			// 
-			panel1.BackColor = Color.Transparent;
-			panel1.Controls.Add(crownLabel1);
-			panel1.Controls.Add(parrotFlatProgressBar1);
-			panel1.Controls.Add(crownLabel2);
-			panel1.Controls.Add(parrotFlatProgressBar2);
-			panel1.Controls.Add(crownLabel3);
-			panel1.Controls.Add(parrotFlatProgressBar3);
-			panel1.Location = new Point(192, 89);
-			panel1.Name = "panel1";
-			panel1.Size = new Size(542, 60);
-			panel1.TabIndex = 38;
+			pnlCarbonbydrateProteinFat.BackColor = Color.Transparent;
+			pnlCarbonbydrateProteinFat.Controls.Add(crownLabel1);
+			pnlCarbonbydrateProteinFat.Controls.Add(progressBarCarbonhydrate);
+			pnlCarbonbydrateProteinFat.Controls.Add(crownLabel2);
+			pnlCarbonbydrateProteinFat.Controls.Add(progressBarProtein);
+			pnlCarbonbydrateProteinFat.Controls.Add(crownLabel3);
+			pnlCarbonbydrateProteinFat.Controls.Add(progressBarFat);
+			pnlCarbonbydrateProteinFat.Location = new Point(192, 89);
+			pnlCarbonbydrateProteinFat.Name = "pnlCarbonbydrateProteinFat";
+			pnlCarbonbydrateProteinFat.Size = new Size(542, 60);
+			pnlCarbonbydrateProteinFat.TabIndex = 38;
 			// 
 			// crownLabel1
 			// 
@@ -250,30 +251,30 @@
 			crownLabel1.TabIndex = 10;
 			crownLabel1.Text = "Carbohydrate";
 			// 
-			// parrotFlatProgressBar1
+			// progressBarCarbonhydrate
 			// 
-			parrotFlatProgressBar1.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
-			parrotFlatProgressBar1.BorderColor = Color.Black;
-			parrotFlatProgressBar1.Colors = (List<Color>)resources.GetObject("parrotFlatProgressBar1.Colors");
-			parrotFlatProgressBar1.CompleteBackColor = Color.FromArgb(0, 120, 250);
-			parrotFlatProgressBar1.CompleteColor = Color.FromArgb(1, 119, 215);
-			parrotFlatProgressBar1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-			parrotFlatProgressBar1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			parrotFlatProgressBar1.IncompletedBackColor = Color.FromArgb(180, 180, 180);
-			parrotFlatProgressBar1.InocmpletedColor = Color.White;
-			parrotFlatProgressBar1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-			parrotFlatProgressBar1.Location = new Point(3, 37);
-			parrotFlatProgressBar1.MaxValue = 100;
-			parrotFlatProgressBar1.Name = "parrotFlatProgressBar1";
-			parrotFlatProgressBar1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-			parrotFlatProgressBar1.Positions = (List<float>)resources.GetObject("parrotFlatProgressBar1.Positions");
-			parrotFlatProgressBar1.ShowBorder = true;
-			parrotFlatProgressBar1.Size = new Size(135, 11);
-			parrotFlatProgressBar1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			parrotFlatProgressBar1.TabIndex = 11;
-			parrotFlatProgressBar1.Text = "parrotFlatProgressBar1";
-			parrotFlatProgressBar1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			parrotFlatProgressBar1.Value = 50;
+			progressBarCarbonhydrate.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
+			progressBarCarbonhydrate.BorderColor = Color.Black;
+			progressBarCarbonhydrate.Colors = (List<Color>)resources.GetObject("progressBarCarbonhydrate.Colors");
+			progressBarCarbonhydrate.CompleteBackColor = Color.FromArgb(0, 120, 250);
+			progressBarCarbonhydrate.CompleteColor = Color.FromArgb(1, 119, 215);
+			progressBarCarbonhydrate.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+			progressBarCarbonhydrate.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+			progressBarCarbonhydrate.IncompletedBackColor = Color.FromArgb(180, 180, 180);
+			progressBarCarbonhydrate.InocmpletedColor = Color.White;
+			progressBarCarbonhydrate.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+			progressBarCarbonhydrate.Location = new Point(3, 37);
+			progressBarCarbonhydrate.MaxValue = 100;
+			progressBarCarbonhydrate.Name = "progressBarCarbonhydrate";
+			progressBarCarbonhydrate.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+			progressBarCarbonhydrate.Positions = (List<float>)resources.GetObject("progressBarCarbonhydrate.Positions");
+			progressBarCarbonhydrate.ShowBorder = true;
+			progressBarCarbonhydrate.Size = new Size(135, 11);
+			progressBarCarbonhydrate.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			progressBarCarbonhydrate.TabIndex = 11;
+			progressBarCarbonhydrate.Text = "parrotFlatProgressBar1";
+			progressBarCarbonhydrate.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			progressBarCarbonhydrate.Value = 50;
 			// 
 			// crownLabel2
 			// 
@@ -287,30 +288,30 @@
 			crownLabel2.TabIndex = 12;
 			crownLabel2.Text = "Protein";
 			// 
-			// parrotFlatProgressBar2
+			// progressBarProtein
 			// 
-			parrotFlatProgressBar2.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
-			parrotFlatProgressBar2.BorderColor = Color.Black;
-			parrotFlatProgressBar2.Colors = (List<Color>)resources.GetObject("parrotFlatProgressBar2.Colors");
-			parrotFlatProgressBar2.CompleteBackColor = Color.FromArgb(0, 120, 250);
-			parrotFlatProgressBar2.CompleteColor = Color.FromArgb(1, 119, 215);
-			parrotFlatProgressBar2.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-			parrotFlatProgressBar2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			parrotFlatProgressBar2.IncompletedBackColor = Color.FromArgb(180, 180, 180);
-			parrotFlatProgressBar2.InocmpletedColor = Color.White;
-			parrotFlatProgressBar2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-			parrotFlatProgressBar2.Location = new Point(168, 37);
-			parrotFlatProgressBar2.MaxValue = 100;
-			parrotFlatProgressBar2.Name = "parrotFlatProgressBar2";
-			parrotFlatProgressBar2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-			parrotFlatProgressBar2.Positions = (List<float>)resources.GetObject("parrotFlatProgressBar2.Positions");
-			parrotFlatProgressBar2.ShowBorder = true;
-			parrotFlatProgressBar2.Size = new Size(147, 11);
-			parrotFlatProgressBar2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			parrotFlatProgressBar2.TabIndex = 13;
-			parrotFlatProgressBar2.Text = "parrotFlatProgressBar2";
-			parrotFlatProgressBar2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			parrotFlatProgressBar2.Value = 50;
+			progressBarProtein.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
+			progressBarProtein.BorderColor = Color.Black;
+			progressBarProtein.Colors = (List<Color>)resources.GetObject("progressBarProtein.Colors");
+			progressBarProtein.CompleteBackColor = Color.FromArgb(0, 120, 250);
+			progressBarProtein.CompleteColor = Color.FromArgb(1, 119, 215);
+			progressBarProtein.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+			progressBarProtein.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+			progressBarProtein.IncompletedBackColor = Color.FromArgb(180, 180, 180);
+			progressBarProtein.InocmpletedColor = Color.White;
+			progressBarProtein.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+			progressBarProtein.Location = new Point(168, 37);
+			progressBarProtein.MaxValue = 100;
+			progressBarProtein.Name = "progressBarProtein";
+			progressBarProtein.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+			progressBarProtein.Positions = (List<float>)resources.GetObject("progressBarProtein.Positions");
+			progressBarProtein.ShowBorder = true;
+			progressBarProtein.Size = new Size(147, 11);
+			progressBarProtein.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			progressBarProtein.TabIndex = 13;
+			progressBarProtein.Text = "parrotFlatProgressBar2";
+			progressBarProtein.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			progressBarProtein.Value = 50;
 			// 
 			// crownLabel3
 			// 
@@ -324,30 +325,30 @@
 			crownLabel3.TabIndex = 14;
 			crownLabel3.Text = "Fat";
 			// 
-			// parrotFlatProgressBar3
+			// progressBarFat
 			// 
-			parrotFlatProgressBar3.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
-			parrotFlatProgressBar3.BorderColor = Color.Black;
-			parrotFlatProgressBar3.Colors = (List<Color>)resources.GetObject("parrotFlatProgressBar3.Colors");
-			parrotFlatProgressBar3.CompleteBackColor = Color.Thistle;
-			parrotFlatProgressBar3.CompleteColor = Color.Thistle;
-			parrotFlatProgressBar3.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-			parrotFlatProgressBar3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			parrotFlatProgressBar3.IncompletedBackColor = Color.FromArgb(180, 180, 180);
-			parrotFlatProgressBar3.InocmpletedColor = Color.White;
-			parrotFlatProgressBar3.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-			parrotFlatProgressBar3.Location = new Point(341, 37);
-			parrotFlatProgressBar3.MaxValue = 100;
-			parrotFlatProgressBar3.Name = "parrotFlatProgressBar3";
-			parrotFlatProgressBar3.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-			parrotFlatProgressBar3.Positions = (List<float>)resources.GetObject("parrotFlatProgressBar3.Positions");
-			parrotFlatProgressBar3.ShowBorder = true;
-			parrotFlatProgressBar3.Size = new Size(147, 11);
-			parrotFlatProgressBar3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			parrotFlatProgressBar3.TabIndex = 15;
-			parrotFlatProgressBar3.Text = "parrotFlatProgressBar3";
-			parrotFlatProgressBar3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			parrotFlatProgressBar3.Value = 50;
+			progressBarFat.BarStyle = ReaLTaiizor.Controls.ParrotFlatProgressBar.Style.Material;
+			progressBarFat.BorderColor = Color.Black;
+			progressBarFat.Colors = (List<Color>)resources.GetObject("progressBarFat.Colors");
+			progressBarFat.CompleteBackColor = Color.Thistle;
+			progressBarFat.CompleteColor = Color.Thistle;
+			progressBarFat.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+			progressBarFat.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+			progressBarFat.IncompletedBackColor = Color.FromArgb(180, 180, 180);
+			progressBarFat.InocmpletedColor = Color.White;
+			progressBarFat.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+			progressBarFat.Location = new Point(341, 37);
+			progressBarFat.MaxValue = 100;
+			progressBarFat.Name = "progressBarFat";
+			progressBarFat.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+			progressBarFat.Positions = (List<float>)resources.GetObject("progressBarFat.Positions");
+			progressBarFat.ShowBorder = true;
+			progressBarFat.Size = new Size(147, 11);
+			progressBarFat.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			progressBarFat.TabIndex = 15;
+			progressBarFat.Text = "parrotFlatProgressBar3";
+			progressBarFat.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			progressBarFat.Value = 50;
 			// 
 			// btnAddSnacks
 			// 
@@ -539,26 +540,26 @@
 			crclProgressBarDailyCalories.UnFilledColor = Color.ForestGreen;
 			crclProgressBarDailyCalories.UnfilledThickness = 24;
 			// 
-			// groupBox4
+			// grpBoxSnacks
 			// 
-			groupBox4.BackColor = Color.Transparent;
-			groupBox4.BackGColor = Color.Turquoise;
-			groupBox4.BaseColor = Color.Transparent;
-			groupBox4.BorderColorG = Color.FromArgb(159, 159, 161);
-			groupBox4.BorderColorH = Color.FromArgb(182, 180, 186);
-			groupBox4.Controls.Add(flpSnacks);
-			groupBox4.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
-			groupBox4.ForeColor = Color.FromArgb(53, 53, 53);
-			groupBox4.HeaderColor = Color.Lavender;
-			groupBox4.Location = new Point(192, 421);
-			groupBox4.MinimumSize = new Size(136, 51);
-			groupBox4.Name = "groupBox4";
-			groupBox4.Padding = new Padding(5, 28, 5, 5);
-			groupBox4.Size = new Size(542, 75);
-			groupBox4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			groupBox4.TabIndex = 32;
-			groupBox4.Tag = "4";
-			groupBox4.Text = "Snacks";
+			grpBoxSnacks.BackColor = Color.Transparent;
+			grpBoxSnacks.BackGColor = Color.Turquoise;
+			grpBoxSnacks.BaseColor = Color.Transparent;
+			grpBoxSnacks.BorderColorG = Color.FromArgb(159, 159, 161);
+			grpBoxSnacks.BorderColorH = Color.FromArgb(182, 180, 186);
+			grpBoxSnacks.Controls.Add(flpSnacks);
+			grpBoxSnacks.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
+			grpBoxSnacks.ForeColor = Color.FromArgb(53, 53, 53);
+			grpBoxSnacks.HeaderColor = Color.Lavender;
+			grpBoxSnacks.Location = new Point(192, 421);
+			grpBoxSnacks.MinimumSize = new Size(136, 51);
+			grpBoxSnacks.Name = "grpBoxSnacks";
+			grpBoxSnacks.Padding = new Padding(5, 28, 5, 5);
+			grpBoxSnacks.Size = new Size(542, 75);
+			grpBoxSnacks.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			grpBoxSnacks.TabIndex = 32;
+			grpBoxSnacks.Tag = "4";
+			grpBoxSnacks.Text = "Snacks";
 			// 
 			// flpSnacks
 			// 
@@ -569,26 +570,26 @@
 			flpSnacks.TabIndex = 2;
 			flpSnacks.Tag = "4";
 			// 
-			// groupBox3
+			// grpBoxDinner
 			// 
-			groupBox3.BackColor = Color.Transparent;
-			groupBox3.BackGColor = Color.Turquoise;
-			groupBox3.BaseColor = Color.Transparent;
-			groupBox3.BorderColorG = Color.FromArgb(159, 159, 161);
-			groupBox3.BorderColorH = Color.FromArgb(182, 180, 186);
-			groupBox3.Controls.Add(flpDinner);
-			groupBox3.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
-			groupBox3.ForeColor = Color.FromArgb(53, 53, 53);
-			groupBox3.HeaderColor = Color.Lavender;
-			groupBox3.Location = new Point(192, 340);
-			groupBox3.MinimumSize = new Size(136, 51);
-			groupBox3.Name = "groupBox3";
-			groupBox3.Padding = new Padding(5, 28, 5, 5);
-			groupBox3.Size = new Size(542, 75);
-			groupBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			groupBox3.TabIndex = 31;
-			groupBox3.Tag = "3";
-			groupBox3.Text = "Dinner";
+			grpBoxDinner.BackColor = Color.Transparent;
+			grpBoxDinner.BackGColor = Color.Turquoise;
+			grpBoxDinner.BaseColor = Color.Transparent;
+			grpBoxDinner.BorderColorG = Color.FromArgb(159, 159, 161);
+			grpBoxDinner.BorderColorH = Color.FromArgb(182, 180, 186);
+			grpBoxDinner.Controls.Add(flpDinner);
+			grpBoxDinner.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
+			grpBoxDinner.ForeColor = Color.FromArgb(53, 53, 53);
+			grpBoxDinner.HeaderColor = Color.Lavender;
+			grpBoxDinner.Location = new Point(192, 340);
+			grpBoxDinner.MinimumSize = new Size(136, 51);
+			grpBoxDinner.Name = "grpBoxDinner";
+			grpBoxDinner.Padding = new Padding(5, 28, 5, 5);
+			grpBoxDinner.Size = new Size(542, 75);
+			grpBoxDinner.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			grpBoxDinner.TabIndex = 31;
+			grpBoxDinner.Tag = "3";
+			grpBoxDinner.Text = "Dinner";
 			// 
 			// flpDinner
 			// 
@@ -599,26 +600,26 @@
 			flpDinner.TabIndex = 1;
 			flpDinner.Tag = "3";
 			// 
-			// groupBox2
+			// grpBoxLunch
 			// 
-			groupBox2.BackColor = Color.Transparent;
-			groupBox2.BackGColor = Color.Turquoise;
-			groupBox2.BaseColor = Color.Transparent;
-			groupBox2.BorderColorG = Color.FromArgb(159, 159, 161);
-			groupBox2.BorderColorH = Color.FromArgb(182, 180, 186);
-			groupBox2.Controls.Add(flpLunch);
-			groupBox2.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
-			groupBox2.ForeColor = Color.FromArgb(53, 53, 53);
-			groupBox2.HeaderColor = Color.Lavender;
-			groupBox2.Location = new Point(192, 260);
-			groupBox2.MinimumSize = new Size(136, 51);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Padding = new Padding(5, 28, 5, 5);
-			groupBox2.Size = new Size(542, 75);
-			groupBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			groupBox2.TabIndex = 30;
-			groupBox2.Tag = "2";
-			groupBox2.Text = "Lunch";
+			grpBoxLunch.BackColor = Color.Transparent;
+			grpBoxLunch.BackGColor = Color.Turquoise;
+			grpBoxLunch.BaseColor = Color.Transparent;
+			grpBoxLunch.BorderColorG = Color.FromArgb(159, 159, 161);
+			grpBoxLunch.BorderColorH = Color.FromArgb(182, 180, 186);
+			grpBoxLunch.Controls.Add(flpLunch);
+			grpBoxLunch.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
+			grpBoxLunch.ForeColor = Color.FromArgb(53, 53, 53);
+			grpBoxLunch.HeaderColor = Color.Lavender;
+			grpBoxLunch.Location = new Point(192, 260);
+			grpBoxLunch.MinimumSize = new Size(136, 51);
+			grpBoxLunch.Name = "grpBoxLunch";
+			grpBoxLunch.Padding = new Padding(5, 28, 5, 5);
+			grpBoxLunch.Size = new Size(542, 75);
+			grpBoxLunch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			grpBoxLunch.TabIndex = 30;
+			grpBoxLunch.Tag = "2";
+			grpBoxLunch.Text = "Lunch";
 			// 
 			// flpLunch
 			// 
@@ -628,26 +629,26 @@
 			flpLunch.TabIndex = 1;
 			flpLunch.Tag = "2";
 			// 
-			// groupBox1
+			// grpBreakfast
 			// 
-			groupBox1.BackColor = Color.Transparent;
-			groupBox1.BackGColor = Color.Turquoise;
-			groupBox1.BaseColor = Color.Transparent;
-			groupBox1.BorderColorG = Color.FromArgb(159, 159, 161);
-			groupBox1.BorderColorH = Color.FromArgb(182, 180, 186);
-			groupBox1.Controls.Add(flpBreakfast);
-			groupBox1.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
-			groupBox1.ForeColor = Color.FromArgb(53, 53, 53);
-			groupBox1.HeaderColor = Color.Lavender;
-			groupBox1.Location = new Point(192, 178);
-			groupBox1.MinimumSize = new Size(136, 51);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Padding = new Padding(5, 28, 5, 5);
-			groupBox1.Size = new Size(542, 75);
-			groupBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-			groupBox1.TabIndex = 29;
-			groupBox1.Tag = "1";
-			groupBox1.Text = "Breakfast";
+			grpBreakfast.BackColor = Color.Transparent;
+			grpBreakfast.BackGColor = Color.Turquoise;
+			grpBreakfast.BaseColor = Color.Transparent;
+			grpBreakfast.BorderColorG = Color.FromArgb(159, 159, 161);
+			grpBreakfast.BorderColorH = Color.FromArgb(182, 180, 186);
+			grpBreakfast.Controls.Add(flpBreakfast);
+			grpBreakfast.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point);
+			grpBreakfast.ForeColor = Color.FromArgb(53, 53, 53);
+			grpBreakfast.HeaderColor = Color.Lavender;
+			grpBreakfast.Location = new Point(192, 178);
+			grpBreakfast.MinimumSize = new Size(136, 51);
+			grpBreakfast.Name = "grpBreakfast";
+			grpBreakfast.Padding = new Padding(5, 28, 5, 5);
+			grpBreakfast.Size = new Size(542, 75);
+			grpBreakfast.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+			grpBreakfast.TabIndex = 29;
+			grpBreakfast.Tag = "1";
+			grpBreakfast.Text = "Breakfast";
 			// 
 			// flpBreakfast
 			// 
@@ -657,36 +658,46 @@
 			flpBreakfast.TabIndex = 0;
 			flpBreakfast.Tag = "1";
 			// 
+			// dtNow
+			// 
+			dtNow.Location = new Point(192, 29);
+			dtNow.Margin = new Padding(4, 2, 4, 2);
+			dtNow.Name = "dtNow";
+			dtNow.Size = new Size(273, 27);
+			dtNow.TabIndex = 43;
+			dtNow.ValueChanged += dtNow_ValueChanged;
+			// 
 			// Meals
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			ClientSize = new Size(928, 525);
+			Controls.Add(dtNow);
 			Controls.Add(btnRemoveSnack);
 			Controls.Add(btnRemoveDinner);
 			Controls.Add(btnRemoveLunch);
 			Controls.Add(btnRemoveBreakfast);
-			Controls.Add(panel1);
+			Controls.Add(pnlCarbonbydrateProteinFat);
 			Controls.Add(btnAddSnacks);
 			Controls.Add(btnAddDinner);
 			Controls.Add(btnAddLunch);
 			Controls.Add(btnAddBreakfast);
 			Controls.Add(crclProgressBarDailyCalories);
-			Controls.Add(groupBox4);
-			Controls.Add(groupBox3);
-			Controls.Add(groupBox2);
-			Controls.Add(groupBox1);
+			Controls.Add(grpBoxSnacks);
+			Controls.Add(grpBoxDinner);
+			Controls.Add(grpBoxLunch);
+			Controls.Add(grpBreakfast);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Meals";
 			Text = "Meals";
 			Load += Meals_Load;
-			panel1.ResumeLayout(false);
-			panel1.PerformLayout();
-			groupBox4.ResumeLayout(false);
-			groupBox3.ResumeLayout(false);
-			groupBox2.ResumeLayout(false);
-			groupBox1.ResumeLayout(false);
+			pnlCarbonbydrateProteinFat.ResumeLayout(false);
+			pnlCarbonbydrateProteinFat.PerformLayout();
+			grpBoxSnacks.ResumeLayout(false);
+			grpBoxDinner.ResumeLayout(false);
+			grpBoxLunch.ResumeLayout(false);
+			grpBreakfast.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -696,25 +707,26 @@
 		private ReaLTaiizor.Controls.CyberButton btnRemoveDinner;
 		private ReaLTaiizor.Controls.CyberButton btnRemoveLunch;
 		private ReaLTaiizor.Controls.CyberButton btnRemoveBreakfast;
-		private Panel panel1;
+		private Panel pnlCarbonbydrateProteinFat;
 		private ReaLTaiizor.Controls.CrownLabel crownLabel1;
-		private ReaLTaiizor.Controls.ParrotFlatProgressBar parrotFlatProgressBar1;
+		private ReaLTaiizor.Controls.ParrotFlatProgressBar progressBarCarbonhydrate;
 		private ReaLTaiizor.Controls.CrownLabel crownLabel2;
-		private ReaLTaiizor.Controls.ParrotFlatProgressBar parrotFlatProgressBar2;
+		private ReaLTaiizor.Controls.ParrotFlatProgressBar progressBarProtein;
 		private ReaLTaiizor.Controls.CrownLabel crownLabel3;
-		private ReaLTaiizor.Controls.ParrotFlatProgressBar parrotFlatProgressBar3;
+		private ReaLTaiizor.Controls.ParrotFlatProgressBar progressBarFat;
 		private ReaLTaiizor.Controls.CyberButton btnAddSnacks;
 		private ReaLTaiizor.Controls.CyberButton btnAddDinner;
 		private ReaLTaiizor.Controls.CyberButton btnAddLunch;
 		private ReaLTaiizor.Controls.CyberButton btnAddBreakfast;
 		private ReaLTaiizor.Controls.ParrotCircleProgressBar crclProgressBarDailyCalories;
-		private ReaLTaiizor.Controls.GroupBox groupBox4;
+		private ReaLTaiizor.Controls.GroupBox grpBoxSnacks;
 		private FlowLayoutPanel flpSnacks;
-		private ReaLTaiizor.Controls.GroupBox groupBox3;
+		private ReaLTaiizor.Controls.GroupBox grpBoxDinner;
 		private FlowLayoutPanel flpDinner;
-		private ReaLTaiizor.Controls.GroupBox groupBox2;
+		private ReaLTaiizor.Controls.GroupBox grpBoxLunch;
 		private FlowLayoutPanel flpLunch;
-		private ReaLTaiizor.Controls.GroupBox groupBox1;
+		private ReaLTaiizor.Controls.GroupBox grpBreakfast;
 		private FlowLayoutPanel flpBreakfast;
+		private DateTimePicker dtNow;
 	}
 }
