@@ -689,6 +689,7 @@
 			Controls.Add(grpBoxLunch);
 			Controls.Add(grpBreakfast);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Meals";
 			Text = "Meals";
 			Load += Meals_Load;

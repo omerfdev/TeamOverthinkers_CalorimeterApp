@@ -27,8 +27,8 @@ namespace CalorimeterUI
 			{
 				this.BackgroundImage = Image.FromFile("..\\..\\..\\Image\\arkaplan.png");
 			}
-		}		
-		
+		}
+
 		#endregion
 
 		#region Send Verification Code

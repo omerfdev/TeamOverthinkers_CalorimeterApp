@@ -93,6 +93,7 @@
 			Controls.Add(txtSearchBar);
 			Controls.Add(flowLayoutPanel1);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Categories";
 			Text = "Categories";
 			Load += Categories_Load;

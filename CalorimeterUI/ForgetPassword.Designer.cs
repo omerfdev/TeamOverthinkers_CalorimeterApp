@@ -142,6 +142,7 @@
 			Controls.Add(txtMail);
 			Controls.Add(pbBack);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "ForgetPassword";
 			Text = "ResetPassword";
 			Load += ResetPassword_Load;

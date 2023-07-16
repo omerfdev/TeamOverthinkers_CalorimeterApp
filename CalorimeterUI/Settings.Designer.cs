@@ -228,6 +228,7 @@
 			Controls.Add(btnSave);
 			Controls.Add(lblChangePassword);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Settings";
 			Text = "Settings";
 			Load += Settings_Load;

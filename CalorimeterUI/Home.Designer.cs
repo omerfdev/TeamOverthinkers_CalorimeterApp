@@ -283,6 +283,7 @@
 			Controls.Add(lblWelcome);
 			Controls.Add(dAvatar);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Home";
 			Text = "Home";
 			Load += Home_Load;

@@ -205,6 +205,7 @@
 			Controls.Add(lblFoodDescription);
 			Controls.Add(lblFoodName);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "FoodForm";
 			Text = "FoodForm";
 			Load += FoodForm_Load;

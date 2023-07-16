@@ -99,6 +99,7 @@
 			Controls.Add(lblVerified);
 			Controls.Add(pbVerified);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "VerificationAcceptedForm";
 			Text = "VerificationAcceptedForm";
 			Load += VerificationAcceptedForm_Load;

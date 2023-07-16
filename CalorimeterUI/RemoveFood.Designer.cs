@@ -134,6 +134,7 @@
 			Controls.Add(btnExit);
 			Controls.Add(flowLayoutPanel1);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "RemoveFood";
 			Text = "RemoveFood";
 			Load += RemoveFood_Load;

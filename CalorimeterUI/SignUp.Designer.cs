@@ -330,6 +330,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
 			ClientSize = new Size(520, 450);
 			Controls.Add(pictureBox1);
 			Controls.Add(rpBarPassword);
@@ -349,6 +350,7 @@
 			Controls.Add(txtName);
 			Controls.Add(pbBack);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "SignUp";
 			Text = "SignUp";
 			Load += SignUp_Load;

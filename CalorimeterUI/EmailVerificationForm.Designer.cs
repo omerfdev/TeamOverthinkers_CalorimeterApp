@@ -120,6 +120,7 @@
 			Controls.Add(dungeonLabel1);
 			Controls.Add(txtVerification);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "EmailVerificationForm";
 			Text = "EmailVerificationForm";
 			Load += EmailVerificationForm_Load;

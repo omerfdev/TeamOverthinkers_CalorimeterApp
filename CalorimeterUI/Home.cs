@@ -48,7 +48,7 @@ namespace CalorimeterUI
 			crcProgressCalorie.Percentage = (int)(Methods.TotalCalorieValue * 100 / Methods.TargetedCalories);
 			FavoriteFoods();
 		}
-		
+
 		#region home Page Favourite Food Process
 		/// <summary>
 		/// Method gives Favorite Foods

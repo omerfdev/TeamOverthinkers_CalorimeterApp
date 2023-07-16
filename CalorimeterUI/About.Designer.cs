@@ -67,6 +67,7 @@
 			Controls.Add(pbGitHub);
 			Controls.Add(pbAvocado);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "About";
 			Text = "About";
 			Load += About_Load;

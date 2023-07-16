@@ -327,6 +327,7 @@
 			Controls.Add(flwSideBar);
 			Controls.Add(lblExit);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			IsMdiContainer = true;
 			Name = "HomeScreen";
 			Text = "HomeScreen";

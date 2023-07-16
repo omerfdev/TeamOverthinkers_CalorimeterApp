@@ -109,7 +109,7 @@ namespace CalorimeterUI
 			MessageBox.Show("User info has been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 		#endregion
-		
+
 		#region Form Textchanged process
 		private void txtWeight_TextChanged(object sender, EventArgs e)
 		{

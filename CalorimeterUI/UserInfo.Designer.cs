@@ -365,6 +365,7 @@
 			Controls.Add(btnSave);
 			Controls.Add(grpPersonal);
 			FormBorderStyle = FormBorderStyle.None;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "UserInfo";
 			Text = "UserInfo";
 			Load += UserInfo_Load;
