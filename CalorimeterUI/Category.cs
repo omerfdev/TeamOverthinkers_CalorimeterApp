@@ -3,6 +3,7 @@ using BLL.BLL;
 using CalorimeterUI;
 using Entities;
 using System.Data;
+using Categories = Entities.Categories;
 
 namespace AdminCategory
 {
@@ -62,7 +63,6 @@ namespace AdminCategory
 		#region Button Add Process
 		private void btnCategoryAdd_Click(object sender, EventArgs e)
 		{
-
 			Categories category = new Categories();
 			category.CategoryName = txtCategoryName.Text;
 			category.CategoryDescription = txtCategoryDescription.Text;
@@ -96,7 +96,6 @@ namespace AdminCategory
 					MessageBox.Show("Added Successfully");
 					ClearControls();
 					GridFill();
-
 				}
 				else
 				{
