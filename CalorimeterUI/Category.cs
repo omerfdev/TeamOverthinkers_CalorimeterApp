@@ -3,6 +3,7 @@ using BLL.BLL;
 using CalorimeterUI;
 using Entities;
 using System.Data;
+using Categories = Entities.Categories;
 
 namespace AdminCategory
 {

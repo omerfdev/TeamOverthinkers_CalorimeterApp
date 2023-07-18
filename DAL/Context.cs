@@ -18,7 +18,7 @@ namespace DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=ALMALI\\OMERFDEV;Initial Catalog=CaloriMeterDB;User ID=sa;pwd=Omer34;");
+            optionsBuilder.UseSqlServer("Data Source=ALMALI\\OMERFDEV;Initial Catalog=KaloriMeterDB;User ID=sa;pwd=Omer34;");
 			
 		}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
