@@ -1,3 +1,4 @@
+using AdminConsole;
 using BLL;
 using DAL;
 using DrakeUI.Framework;
@@ -127,10 +128,45 @@ namespace CalorimeterUI
 		#region Sign in process
 		private void btnSignIn_Click(object sender, EventArgs e)
 		{
-			Methods.RememberMe(chkRemember, txtMail.Text, txtPwd.Text);
-			HomeScreen homeScreen = new HomeScreen();
-			homeScreen.Show();
-		}
+			try
+			{
+				Users user = new Users();
+				BusinessLayer bl = new BusinessLayer();
+				user = bl.Users.Search(txtMail.Text);
+				string hashPw = Methods.GenerateHash(txtPwd.Text);
+				string txtpw = txtPwd.Text;
+				string txtmail = txtMail.Text;
+				UserID = user.ID;
+				switch (user.IsAdmin)
+				{
+					case true:
+						if (Methods.ComparePassword(user, hashPw))
+						{
+							Methods.RememberMe(chkRemember, txtmail, txtpw);
+							Admin admin = new Admin();
+							admin.Owner = this;
+							chkRemember.Checked = false;
+							this.Hide();
+							admin.ShowDialog();
+						}
+						else
+							MessageBox.Show("Mail adress or password is incorrect.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Stop); ;
+						break;
+					case false:
+						if (Methods.ComparePassword(user, hashPw))
+						{
+							Methods.RememberMe(chkRemember, txtmail, txtpw);
+							HomeScreen home = new HomeScreen();
+							home.Owner = this;
+							chkRemember.Checked = false;
+							this.Hide();
+							home.ShowDialog();
+						}
+						else
+							MessageBox.Show("Mail adress or password is incorrect.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+						break;
+				}
+			}
 
 		private void txtMail_TextChanged(object sender, EventArgs e)
 		{
