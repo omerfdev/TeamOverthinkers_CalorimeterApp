@@ -166,74 +166,80 @@ namespace CalorimeterUI
 							MessageBox.Show("Mail adress or password is incorrect.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 						break;
 				}
+
 			}
+			catch (Exception)
+			{
+				MessageBox.Show("Please enter your e-mail adress and password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
 
 		private void txtMail_TextChanged(object sender, EventArgs e)
-		{
-			Methods.EmailValidation(txtMail, errorProviderEmail, pcEmailVerification);
-		}
+			{
+				Methods.EmailValidation(txtMail, errorProviderEmail, pcEmailVerification);
+			}
 
-		private void lblForgetPwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			ForgetPassword rst = new ForgetPassword();
-			rst.Owner = this;
-			Methods.Visibility(dlblExitForm);
-			Methods.Visibility(dlblDownForm);
-			Methods.Visibility(toggleMode);
-			rst.ShowDialog();
-			this.Show();
-			Methods.Visibility(dlblExitForm);
-			Methods.Visibility(dlblDownForm);
-			Methods.Visibility(toggleMode);
-		}
-		#endregion
+			private void lblForgetPwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+			{
+				ForgetPassword rst = new ForgetPassword();
+				rst.Owner = this;
+				Methods.Visibility(dlblExitForm);
+				Methods.Visibility(dlblDownForm);
+				Methods.Visibility(toggleMode);
+				rst.ShowDialog();
+				this.Show();
+				Methods.Visibility(dlblExitForm);
+				Methods.Visibility(dlblDownForm);
+				Methods.Visibility(toggleMode);
+			}
+			#endregion
 
-		#region Form Exit and Down process
-		private void dlblDownForm_Click(object sender, EventArgs e)
-		{
-			this.WindowState = FormWindowState.Minimized;
-		}
+			#region Form Exit and Down process
+			private void dlblDownForm_Click(object sender, EventArgs e)
+			{
+				this.WindowState = FormWindowState.Minimized;
+			}
 
-		private void dlblExitForm_Click(object sender, EventArgs e)
-		{
-			Environment.Exit(0);
-		}
-		private void dlblExitForm_MouseEnter(object sender, EventArgs e)
-		{
-			dlblExitForm.ForeColor = Color.DarkKhaki;
-		}
+			private void dlblExitForm_Click(object sender, EventArgs e)
+			{
+				Environment.Exit(0);
+			}
+			private void dlblExitForm_MouseEnter(object sender, EventArgs e)
+			{
+				dlblExitForm.ForeColor = Color.DarkKhaki;
+			}
 
-		private void dlblExitForm_MouseLeave(object sender, EventArgs e)
-		{
-			dlblExitForm.ForeColor = Color.Olive;
-		}
+			private void dlblExitForm_MouseLeave(object sender, EventArgs e)
+			{
+				dlblExitForm.ForeColor = Color.Olive;
+			}
 
-		private void dlblDownForm_MouseEnter(object sender, EventArgs e)
-		{
-			dlblDownForm.ForeColor = Color.DarkKhaki;
-		}
+			private void dlblDownForm_MouseEnter(object sender, EventArgs e)
+			{
+				dlblDownForm.ForeColor = Color.DarkKhaki;
+			}
 
-		private void dlblDownForm_MouseLeave(object sender, EventArgs e)
-		{
-			dlblDownForm.ForeColor = Color.Olive;
-		}
-		#endregion
+			private void dlblDownForm_MouseLeave(object sender, EventArgs e)
+			{
+				dlblDownForm.ForeColor = Color.Olive;
+			}
+			#endregion
 
-		#region Register Form Open
-		private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			SignUp sgn = new SignUp();
-			sgn.Owner = this;
-			Methods.Visibility(dlblExitForm);
-			Methods.Visibility(dlblDownForm);
-			Methods.Visibility(toggleMode);
-			sgn.ShowDialog();
-			this.Show();
-			Methods.Visibility(dlblExitForm);
-			Methods.Visibility(dlblDownForm);
-			Methods.Visibility(toggleMode);
-		}
-		#endregion
+			#region Register Form Open
+			private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+			{
+				SignUp sgn = new SignUp();
+				sgn.Owner = this;
+				Methods.Visibility(dlblExitForm);
+				Methods.Visibility(dlblDownForm);
+				Methods.Visibility(toggleMode);
+				sgn.ShowDialog();
+				this.Show();
+				Methods.Visibility(dlblExitForm);
+				Methods.Visibility(dlblDownForm);
+				Methods.Visibility(toggleMode);
+			}
+			#endregion
 
+		}
 	}
-}
