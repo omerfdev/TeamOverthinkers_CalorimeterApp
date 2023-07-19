@@ -281,6 +281,20 @@ namespace CalorimeterUI
 			}
 			#endregion
 
+			#region Compare password process
+			/// <summary>
+			/// Method gives compare password db
+			/// </summary>
+			/// <param name="user"></param>
+			/// <param name="pw"></param>
+			/// <returns></returns>
+			public static bool ComparePassword(Users user, string pw)
+			{
+				if (user.Password == pw) return true;
+				else return false;
+			}
+			#endregion
+
 			#region Textbox input check int process 
 			/// <summary>
 			/// Method gives textbox input only int.
